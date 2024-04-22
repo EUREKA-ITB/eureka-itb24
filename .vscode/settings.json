@@ -1,0 +1,17 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "css.lint.unknownAtRules": "ignore",
+  "autoimport.doubleQuotes": true,
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 80,
+  "importSorter.importStringConfiguration.tabSize": 2,
+  "importSorter.importStringConfiguration.quoteMark": "double",
+  "indentRainbow.colorOnWhiteSpaceOnly": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "prettier.singleAttributePerLine": true
+}
