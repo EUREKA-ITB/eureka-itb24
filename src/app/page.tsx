@@ -6,7 +6,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center">
       <Navbar />
       <Onboarding />
-      <p className="pb-4 text-gray-500">Copyright © 2024 EUREKA! ITB 2024</p>
+      <p className="pb-4 text-gray-500">Copyright © 2024 EUREKA! ITB 2025</p>
     </main>
   );
 }
