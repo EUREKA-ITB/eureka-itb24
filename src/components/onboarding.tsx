@@ -1,31 +1,31 @@
-import { Button } from "./ui/Button";
+import { Button } from "./ui/button";
 
 export default function Onboarding() {
   return (
     <>
-      <div className="flex w-screen h-screen justify-center ">
-        <div className="flex flex-col md:flex-row md:items-center justify-center h-full md:space-x-20 px-20 lg:px-0">
-          <div className="flex flex-col items-center md:items-start space-y-2 ">
-            <h1 className="text-2xl md:text-3xl lg:text-6xl font-bold">
+      <div className="flex h-screen w-screen justify-center ">
+        <div className="flex h-full flex-col justify-center px-20 md:flex-row md:items-center md:space-x-20 lg:px-0">
+          <div className="flex flex-col items-center space-y-2 md:items-start ">
+            <h1 className="text-2xl font-bold md:text-3xl lg:text-6xl">
               EUREKA! ITB 2024
             </h1>
-            <h4 className="text-xl md:text-2xl font-bold">
+            <h4 className="text-xl font-bold md:text-2xl">
               The Physics Multiverse
             </h4>
-            <div className="hidden md:flex items-center pt-6 space-x-4">
-              <Button className="bg-primary text-primary-foreground px-4 py-2 rounded-md">
+            <div className="hidden items-center space-x-4 pt-6 md:flex">
+              <Button className="rounded-md bg-primary px-4 py-2 text-primary-foreground">
                 Register
               </Button>
               <p>1000+ participants in EUREKA! ITB 2022</p>
             </div>
           </div>
           <div className="flex flex-col items-center py-4 ">
-            <div className="w-80 h-80 bg-gray-300 rounded-full"></div>
-            <div className="flex flex-col items-center justify-center pt-6 space-x-4 md:hidden">
-              <Button className="bg-primary text-primary-foreground px-4 py-2 rounded-md">
+            <div className="h-80 w-80 rounded-full bg-gray-300"></div>
+            <div className="flex flex-col items-center justify-center space-x-4 pt-6 md:hidden">
+              <Button className="rounded-md bg-primary px-4 py-2 text-primary-foreground">
                 Register
               </Button>
-              <p className="text-xs mt-2 md:text-md">
+              <p className="md:text-md mt-2 text-xs">
                 1000+ participants in EUREKA! ITB 2022
               </p>
             </div>
@@ -33,12 +33,12 @@ export default function Onboarding() {
         </div>
       </div>
 
-      <div className="flex w-screen h-full items-center">
-        <div className="px-20 md:px-60 flex flex-col  min-w-fit pb-40">
-          <h3 className="text-2xl md:text-4xl font-bold">
+      <div className="flex h-full w-screen items-center">
+        <div className="flex min-w-fit flex-col px-20  pb-40 md:px-60">
+          <h3 className="text-2xl font-bold md:text-4xl">
             What is EUREKA! ITB?
           </h3>
-          <h4 className="text-xl md:text-2xl font-bold pt-5">
+          <h4 className="pt-5 text-xl font-bold md:text-2xl">
             Lorem ipsum dolor sit amet
           </h4>
           <p>
@@ -55,34 +55,31 @@ export default function Onboarding() {
         </div>
       </div>
 
-      <div className="flex w-screen h-full justify-center items-center">
-        <div className="px-20 md:px-60 flex flex-col min-w-fit items-center justify-center space-y-8 py-20">
-          <h3 className="text-2xl md:text-4xl font-bold text-center">
+      <div className="flex h-full w-screen items-center justify-center">
+        <div className="flex min-w-fit flex-col items-center justify-center space-y-8 px-20 py-20 md:px-60">
+          <h3 className="text-center text-2xl font-bold md:text-4xl">
             Competitions on EUREKA! ITB 2024
           </h3>
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-col items-center md:flex-row">
             {Array.from({ length: 5 }).map((_, i) => (
               <div
                 key={i}
-                className="w-36 h-36 lg:w-44 lg:h-44 bg-gray-300 rounded-full my-2 md:mx-2"
+                className="my-2 h-36 w-36 rounded-full bg-gray-300 md:mx-2 lg:h-44 lg:w-44"
               ></div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="flex w-screen h-full justify-center items-center">
-        <div className="px-60 flex flex-col min-w-fit items-center justify-center space-y-8 py-40">
-          <h3 className="text-3xl font-bold text-center">
+      <div className="flex h-full w-screen items-center justify-center">
+        <div className="flex min-w-fit flex-col items-center justify-center space-y-8 px-60 py-40">
+          <h3 className="text-center text-3xl font-bold">
             Previously on EUREKA! ITB 2024
           </h3>
           <div className="flex flex-col lg:flex-row">
             {Array.from({ length: 3 }).map((_, i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center my-2 lg:mx-2"
-              >
-                <div className="w-60 h-60 xl:w-96 xl:h-96 bg-gray-300"></div>
+              <div key={i} className="my-2 flex flex-col items-center lg:mx-2">
+                <div className="h-60 w-60 bg-gray-300 xl:h-96 xl:w-96"></div>
                 <p>Caption</p>
               </div>
             ))}
@@ -90,37 +87,37 @@ export default function Onboarding() {
         </div>
       </div>
 
-      <div className="flex w-screen h-full justify-center items-center">
-        <div className="px-20 md:px-60 flex flex-col min-w-fit items-center justify-center space-y-4 py-40">
-          <h3 className="text-lg lg:text-2xl xl:text-3xl font-bold text-center">
-            Let's explore the Physics Multiverse with
+      <div className="flex h-full w-screen items-center justify-center">
+        <div className="flex min-w-fit flex-col items-center justify-center space-y-4 px-20 py-40 md:px-60">
+          <h3 className="text-center text-lg font-bold lg:text-2xl xl:text-3xl">
+            Let&apos;s explore the Physics Multiverse with
           </h3>
-          <h3 className="text-3xl font-bold pb-4 text-center">
+          <h3 className="pb-4 text-center text-3xl font-bold">
             EUREKA! ITB 2024
           </h3>
           <Button>Register</Button>
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row w-screen h-full justify-between items-center px-40 pt-20 pb-80">
+      <div className="flex h-full w-screen flex-col items-center justify-between px-40 pb-80 pt-20 lg:flex-row">
         <div className="flex flex-col items-center justify-center">
-          <h3 className="text-3xl font-bold pb-4">Sponsors</h3>
-          <div className="flex lg:grid grid-cols-3 grid-rows-2 items-center justify-center ">
+          <h3 className="pb-4 text-3xl font-bold">Sponsors</h3>
+          <div className="flex grid-cols-3 grid-rows-2 items-center justify-center lg:grid ">
             {Array.from({ length: 6 }).map((_, i) => (
               <div
                 key={i}
-                className="w-12 h-12 md:w-24 md:h-24 bg-gray-300 rounded-full mx-2 my-2"
+                className="mx-2 my-2 h-12 w-12 rounded-full bg-gray-300 md:h-24 md:w-24"
               ></div>
             ))}
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <h3 className="text-3xl font-bold pb-4">Media Partners</h3>
-          <div className="flex lg:grid grid-cols-3 grid-rows-2  items-center justify-center">
+          <h3 className="pb-4 text-3xl font-bold">Media Partners</h3>
+          <div className="flex grid-cols-3 grid-rows-2 items-center  justify-center lg:grid">
             {Array.from({ length: 6 }).map((_, i) => (
               <div
                 key={i}
-                className="w-12 h-12 md:w-24 md:h-24 bg-gray-300 rounded-full mx-2 my-2"
+                className="mx-2 my-2 h-12 w-12 rounded-full bg-gray-300 md:h-24 md:w-24"
               ></div>
             ))}
           </div>
