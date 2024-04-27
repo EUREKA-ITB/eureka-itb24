@@ -1,13 +1,13 @@
-import { Button } from "./ui/Button";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-between space-x-4 w-screen p-4 bg-gray-200 md:absolute">
-      <div className="hidden md:flex items-center space-x-3 ">
-        <div className="bg-gray-400 rounded-full w-10 h-10"></div>
+    <div className="flex w-screen items-center justify-between space-x-4 bg-gray-200 p-4 md:absolute">
+      <div className="hidden items-center space-x-3 md:flex ">
+        <div className="h-10 w-10 rounded-full bg-gray-400"></div>
         <p>EUREKA! ITB 2024</p>
       </div>
-      <div className="flex items-center space-x-4 font-bold text-lg ">
+      <div className="flex items-center space-x-4 text-lg font-bold ">
         <a
           href="/"
           className=""

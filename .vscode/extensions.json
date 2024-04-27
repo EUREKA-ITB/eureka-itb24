@@ -11,7 +11,6 @@
     "yoavbls.pretty-ts-errors",
     "prisma.prisma",
     "bradlc.vscode-tailwindcss",
-    "shardulm94.trailing-spaces",
-    "mike-co.import-sorter"
+    "shardulm94.trailing-spaces"
   ]
 }
