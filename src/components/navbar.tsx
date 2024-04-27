@@ -8,7 +8,10 @@ export default function Navbar() {
         <p>EUREKA! ITB 2024</p>
       </div>
       <div className="flex items-center space-x-4 text-lg font-bold ">
-        <a href="/" className="">
+        <a
+          href="/"
+          className=""
+        >
           Home
         </a>
         <Button variant="default">Register</Button>

@@ -78,7 +78,10 @@ export default function Onboarding() {
           </h3>
           <div className="flex flex-col lg:flex-row">
             {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i} className="my-2 flex flex-col items-center lg:mx-2">
+              <div
+                key={i}
+                className="my-2 flex flex-col items-center lg:mx-2"
+              >
                 <div className="h-60 w-60 bg-gray-300 xl:h-96 xl:w-96"></div>
                 <p>Caption</p>
               </div>
