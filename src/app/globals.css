@@ -61,10 +61,10 @@
         --destructive-foreground: 0 0% 98%;
 
         --success: 120 97.1% 73.1%; /* success-300 */
-        --success--50: 116 100% 96.7%;
-        --success--500: 120 89.6% 45.3%;
-        --success--700: 120 90.6% 29.2%;
-        --success--900: 122 76.7% 20.2%;
+        --success-50: 116 100% 96.7%;
+        --success-500: 120 89.6% 45.3%;
+        --success-700: 120 90.6% 29.2%;
+        --success-900: 122 76.7% 20.2%;
         --success-foreground: 212 61.3% 12.2%; /* foreground */
 
         --warning: 28 95.3% 50.2%; /* warning-500 */
