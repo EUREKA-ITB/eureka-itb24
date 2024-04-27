@@ -22,7 +22,7 @@ and then run
 npm install
 ```
 
-and fter everything is installed, you can start run the development server using:
+and after everything is installed, you can start run the development server using:
 ```bash
 npm run dev
 ```
