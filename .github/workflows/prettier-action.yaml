@@ -21,9 +21,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: latest
-      - run: "npm ci"
-      - run: "npm install prettier-plugin-tailwindcss"
 
-      - uses: actionsx/prettier@v3
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.3
         with:
-          args: "--write ."
+          # This part is also where you can pass other options, for example:
+          only_changed: True
