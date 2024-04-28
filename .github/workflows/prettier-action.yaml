@@ -22,14 +22,10 @@ jobs:
           # This is important to fetch the changes to the previous commit
           fetch-depth: 0
 
-      - run: npm install prettier-plugin-tailwindcss
-
       - name: Prettier write
         uses: creyD/prettier_action@v4.3
         with:
           # This part is also where you can pass other options, for example:
           prettier_options: --write .
-
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
           commit_message: "automated: ran prettier write"
+          prettier_plugins: "prettier-plugin-tailwindcss"
