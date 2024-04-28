@@ -17,6 +17,8 @@ jobs:
           # This is important to fetch the changes to the previous commit
           fetch-depth: 0
 
+      - run: npm install prettier-plugin-tailwindcss
+
       - name: Prettier check
         uses: actionsx/prettier@v3
         with:
