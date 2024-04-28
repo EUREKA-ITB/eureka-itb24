@@ -20,6 +20,7 @@ jobs:
       - run: npm install prettier-plugin-tailwindcss
 
       - name: Prettier check
-        uses: actionsx/prettier@v3
+        uses: creyD/prettier_action@v4.3
         with:
-          args: --check .
+          # This part is also where you can pass other options, for example:
+          prettier_options: --check .
