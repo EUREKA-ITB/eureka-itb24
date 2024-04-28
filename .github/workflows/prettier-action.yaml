@@ -17,6 +17,12 @@ jobs:
           # This is important to fetch the changes to the previous commit
           fetch-depth: 0
 
+      - name: Install
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - run: "npm ci"
+
       - uses: actionsx/prettier@v2
         with:
           args: "--write ."
