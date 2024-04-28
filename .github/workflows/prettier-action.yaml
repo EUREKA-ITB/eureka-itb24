@@ -22,6 +22,7 @@ jobs:
         with:
           node-version: latest
       - run: "npm ci"
+      - run: "npm install prettier-plugin-tailwindcss"
 
       - uses: actionsx/prettier@v3
         with:
