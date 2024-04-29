@@ -1,4 +1,4 @@
-import { Barlow as FontSecondary, Inter as FontSans } from "next/font/google";
+import { Inter as FontSans, Barlow as FontSecondary } from "next/font/google";
 
 export const fontSans = FontSans({
   subsets: ["latin"],

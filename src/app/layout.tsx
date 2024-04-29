@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "../components/navbar";
-
 import { fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "EUREKA! ITB 2024",
