@@ -25,7 +25,6 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         neutral: {
-          DEFAULT: "hsl(var(--neutral))",
           100: "hsl(var(--neutral-100))",
           300: "hsl(var(--neutral-300))",
           foreground: "hsl(var(--neutral-foreground))",
