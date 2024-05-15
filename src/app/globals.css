@@ -16,7 +16,7 @@
 
 @layer base {
   :root {
-    --background: 240 10% 4%; /* neutral-950 */
+    --background: 0 0 7%; /* neutral-950 */
     --foreground: 0 0 98%; /* neutral-50 */
 
     --neutral-50: 0 0 98%;
@@ -45,52 +45,73 @@
     --primary-950: 190 84% 15%;
     --primary-foreground: 0 0 98%; /* foreground */
 
-    --secondary: 208 47% 48%; /* secondary-500 */
-    --secondary-50: 214 47% 97%;
-    --secondary-100: 210 50% 94%;
-    --secondary-200: 209 49% 86%;
-    --secondary-300: 209 50% 74%;
-    --secondary-400: 208 50% 60%;
-    --secondary-600: 209 52% 36%;
-    --secondary-700: 211 51% 32%;
-    --secondary-800: 210 47% 27%;
-    --secondary-900: 211 43% 24%;
-    --secondary-950: 213 43% 16%;
+    --secondary: 197 6% 24%; /* secondary-900 */
+    --secondary-50: 180 5% 96%;
+    --secondary-100: 192 10% 90%;
+    --secondary-200: 187 10% 82%;
+    --secondary-300: 184 9% 69%;
+    --secondary-400: 186 8% 53%;
+    --secondary-500: 189 9% 43%;
+    --secondary-600: 193 10% 36%;
+    --secondary-700: 193 8% 33%;
+    --secondary-800: 192 7% 27%;
+    --secondary-900: 197 6% 24%;
+    --secondary-950: 200 8% 15%;
     --secondary-foreground: 0 0 98%; /* foreground */
 
-    --accent: 36 84% 64% /* accent-300 */ --accent-50: 40 90% 96% --accent-100:
-      40 86% 89% --accent-200: 40 84% 77% --accent-400: 32 83% 60% --accent-500:
-      26 77% 55% --accent-600: 20 67% 47% --accent-700: 15 69% 38% --accent-800:
-      13 66% 32% --accent-900: 12 66% 26% --accent-950: 13 80% 14%
-      --accent-foreground: 0 0 98%; /* foreground */
+    --accent: 36 84% 64%; /* accent-300 */
+    --accent-50: 40 90% 96%;
+    --accent-100: 40 86% 89%;
+    --accent-200: 40 84% 77%;
+    --accent-400: 32 83% 60%;
+    --accent-500: 26 77% 55%;
+    --accent-600: 20 67% 47%;
+    --accent-700: 15 69% 38%;
+    --accent-800: 13 66% 32%;
+    --accent-900: 12 66% 26%;
+    --accent-950: 13 80% 14%;
+    --accent-foreground: 0 0 7%; /* background */
 
-    --destructive: 4 61% 49% /* destructive-600*/ --destructive-50: 0 63% 97%
-      --destructive-100: 0 65% 93% --destructive-200: 1 70% 88%
-      --destructive-300: 2 71% 80% --destructive-400: 2 70% 68%
-      --destructive-500: 2 68% 58% --destructive-700: 4 63% 41%
-      --destructive-800: 3 61% 34% --destructive-900: 2 55% 30%
-      --destructive-950: 2 66% 15% --destructive-foreground: 0 0 98%; /* foreground */
+    --destructive: 4 61% 49%; /* destructive-600*/
+    --destructive-50: 0 63% 97%;
+    --destructive-100: 0 65% 93%;
+    --destructive-200: 1 70% 88%;
+    --destructive-300: 2 71% 80%;
+    --destructive-400: 2 70% 68%;
+    --destructive-500: 2 68% 58%;
+    --destructive-700: 4 63% 41%;
+    --destructive-800: 3 61% 34%;
+    --destructive-900: 2 55% 30%;
+    --destructive-950: 2 66% 15%;
+    --destructive-foreground: 0 0 98%; /* foreground */
 
-    --success: 131 58% 66% /* success-400 */ --success-50: 136 73% 97%
-      --success-100: 134 76% 94% --success-200: 136 70% 87% --success-300: 133
-      67% 78% --success-500: 127 45% 56% --success-600: 126 36% 46%
-      --success-700: 127 35% 36% --success-800: 131 35% 29% --success-900: 133
-      34% 24% --success-950: 133 43% 12% --success-foreground: 0 0 98%; /* foreground */
+    --success: 131 58% 66%; /* success-400 */
+    --success-50: 136 73% 97%;
+    --success-100: 134 76% 94%;
+    --success-200: 136 70% 87%;
+    --success-300: 133 67% 78%;
+    --success-500: 127 45% 56%;
+    --success-600: 126 36% 46%;
+    --success-700: 127 35% 36%;
+    --success-800: 131 35% 29%;
+    --success-900: 133 34% 24%;
+    --success-950: 133 43% 12%;
+    --success-foreground: 0 0 98%; /* foreground */
 
     --black: hsl(0 0 0%);
     --white: hsl(0 0 100%);
 
     /* shadcn-ui */
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
+    --card: 240 6% 10%; /* neutral-900 */
+    --card-foreground: 0 0% 98%; /* neutral-50 / foreground */
+    --popover: 240 6% 10%; /* neutral-900 */
+    --popover-foreground: 0 0% 98%; /* neutral-50 / foreground */
+    --muted: 240 4% 16%; /* neutral-800 */
     --muted-foreground: 0 0% 63.9%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --radius: 0.5rem;
+    --border: 240 4% 16%; /* neutral-800 */
+    --input: 240 4% 16%; /* neutral-800 */
+    --ring: 187 75% 27%; /* primary-800 */
+    --radius: 1rem;
   }
 }
 
