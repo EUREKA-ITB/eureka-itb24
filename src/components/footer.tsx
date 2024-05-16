@@ -1,7 +1,7 @@
 import logo_eureka from "@/../public/logo_eureka.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { BsTwitterX,BsInstagram ,BsFacebook  } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsTwitterX } from "react-icons/bs";
 
 export default function Footer() {
   return (
@@ -48,20 +48,26 @@ export default function Footer() {
         </div>
         <div>
           <div className="pt-5 sm:flex sm:items-center sm:justify-between">
-            <div className="flex">                
+            <div className="flex">
               <Link
                 href="https://www.instagram.com/eurekaitb/"
-                className="text-gray-400 hover:text-gray-200 px-3"
-              ><BsInstagram/></Link>
+                className="px-3 text-gray-400 hover:text-gray-200"
+              >
+                <BsInstagram />
+              </Link>
               <div className="icon-instagram"></div>
               <Link
                 href="https://twitter.com/eurekaitb"
-                className="text-gray-400 hover:text-gray-200 px-3"
-              ><BsTwitterX/></Link>
+                className="px-3 text-gray-400 hover:text-gray-200"
+              >
+                <BsTwitterX />
+              </Link>
               <Link
                 href="https://www.facebook.com/EurekaITB/"
-                className="text-gray-400 hover:text-gray-200 px-3"
-              ><BsFacebook/></Link>
+                className="px-3 text-gray-400 hover:text-gray-200"
+              >
+                <BsFacebook />
+              </Link>
             </div>
             <span className="text-sm text-gray-400 sm:text-center">
               © 2024 EUREKA! ITB
