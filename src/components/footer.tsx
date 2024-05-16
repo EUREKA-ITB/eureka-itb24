@@ -1,12 +1,13 @@
-import logo_eureka from "@/components/img/logo_eureka.png";
+import logo_eureka from "@/../public/logo_eureka.svg";
 import Image from "next/image";
+import Link from "next/link";
+import { BsTwitterX,BsInstagram ,BsFacebook  } from "react-icons/bs";
 
-export default function FooterPage() {
+export default function Footer() {
   return (
     <>
       <footer className="w-full px-20 pb-10">
         <div className="flex flex-col justify-between  md:flex-row md:items-center ">
-          <div className=""></div>
           <div className="flex flex-col items-center">
             <Image
               src={logo_eureka}
@@ -18,61 +19,49 @@ export default function FooterPage() {
             <p>The Physics Multiverse </p>
             <h1 className="text-4xl font-bold italic">EUREKA! ITB 2024</h1>
             <h2 className="pt-10 text-2xl font-bold">COMPETITIONS</h2>
-            <a
+            <Link
               href="#"
               className="hover:underline"
             >
               Physics Olympiad
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:underline"
             >
               Scientific Writing Competition
-            </a>
+            </Link>
             <h2 className="pt-10 text-2xl font-bold">ACKNOWLEDGEMENTS</h2>
-            <a
+            <Link
               href="#"
               className="hover:underline"
             >
               Sponsors
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:underline"
             >
               Media Partners
-            </a>
+            </Link>
           </div>
         </div>
         <div>
           <div className="pt-5 sm:flex sm:items-center sm:justify-between">
-            <div className="flex">
-              <link
-                href="https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css"
-                rel="stylesheet"
-              />
-              <link
-                href="https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css"
-                rel="stylesheet"
-              />
-              <link
-                href="https://unpkg.com/css.gg@2.0.0/icons/css/twitter.css"
-                rel="stylesheet"
-              />
-
-              <a
+            <div className="flex">                
+              <Link
                 href="https://www.instagram.com/eurekaitb/"
-                className="gg-instagram m-4 text-gray-400 hover:text-gray-200 dark:hover:text-white"
-              ></a>
-              <a
+                className="text-gray-400 hover:text-gray-200 px-3"
+              ><BsInstagram/></Link>
+              <div className="icon-instagram"></div>
+              <Link
                 href="https://twitter.com/eurekaitb"
-                className="gg-twitter m-4 text-gray-400 hover:text-gray-200 dark:hover:text-white"
-              ></a>
-              <a
+                className="text-gray-400 hover:text-gray-200 px-3"
+              ><BsTwitterX/></Link>
+              <Link
                 href="https://www.facebook.com/EurekaITB/"
-                className="gg-facebook m-4 text-gray-400 hover:text-gray-200 dark:hover:text-white"
-              ></a>
+                className="text-gray-400 hover:text-gray-200 px-3"
+              ><BsFacebook/></Link>
             </div>
             <span className="text-sm text-gray-400 sm:text-center">
               © 2024 EUREKA! ITB
