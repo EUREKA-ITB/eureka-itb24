@@ -1,4 +1,4 @@
-import { Button } from "src/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   return (
@@ -9,7 +9,7 @@ export default function Navbar() {
       </div>
       <div className="flex items-center space-x-10 text-lg font-bold ">
         <a
-          href="/footer"
+          href="#"
           className=""
         >
           Home
