@@ -1,4 +1,5 @@
-import { fontSans } from "@/lib/fonts";
+import { Toaster } from "@/components/ui/sonner";
+import { fontSans, fontSecondary } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 
@@ -16,8 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={cn("font-sans antialiased", fontSans.variable)}>
+      <body
+        className={cn(
+          "font-sans antialiased",
+          fontSans.variable,
+          fontSecondary.variable,
+        )}
+      >
         {children}
+        <Toaster />
       </body>
     </html>
   );
