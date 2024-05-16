@@ -3,7 +3,7 @@ import logo_eureka from "@/components/img/logo_eureka.png"
 export default function FooterPage(){
     return <>
     
-<footer className="px-10 pb-10 w-full">
+<footer className="px-20 pb-10 w-full">
     <div className="flex flex-col justify-between  md:flex-row md:items-center ">
         <div className=""></div>
         <div className="flex flex-col items-center">
@@ -27,15 +27,14 @@ export default function FooterPage(){
                 <link href='https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css' rel='stylesheet'/>
                 <link href='https://unpkg.com/css.gg@2.0.0/icons/css/twitter.css' rel='stylesheet'/>
                         
-                <a href="https://www.instagram.com/eurekaitb/" className="gg-instagram text-gray-500 hover:text-gray-900 dark:hover:text-white m-4"></a>
-                <a href="https://twitter.com/eurekaitb" className="gg-twitter text-gray-500 hover:text-gray-900 dark:hover:text-white m-4"></a>
-                <a href="https://www.facebook.com/EurekaITB/" className="gg-facebook text-gray-500 hover:text-gray-900 dark:hover:text-white m-4"></a>
+                <a href="https://www.instagram.com/eurekaitb/" className="gg-instagram text-gray-400 hover:text-gray-200 dark:hover:text-white m-4"></a>
+                <a href="https://twitter.com/eurekaitb" className="gg-twitter text-gray-400 hover:text-gray-200 dark:hover:text-white m-4"></a>
+                <a href="https://www.facebook.com/EurekaITB/" className="gg-facebook text-gray-400 hover:text-gray-200 dark:hover:text-white m-4"></a>
                 
             </div>
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 EUREKA! ITB.</span>
+          <span className="text-sm text-gray-400 sm:text-center">© 2024 EUREKA! ITB</span>
         </div>
     </div>
 </footer>
-
     </>;
 }
