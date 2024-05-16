@@ -1,11 +1,13 @@
 import Image from 'next/image'
+import logo_eureka from "@/components/img/logo_eureka.png"
 export default function FooterPage(){
     return <>
     
 <footer className="px-10 pb-10 w-full">
     <div className="flex flex-col justify-between  md:flex-row md:items-center ">
+        <div className=""></div>
         <div className="flex flex-col items-center">
-            <Image src="./src/components/img/logo_eureka.svg" width={80} height={80} alt=""/>
+            <Image src={logo_eureka} width={300} alt=""/>
         </div>
         <div className="flex flex-col items-end space-y-2 pt-10 md:pt-0 ">
             <p>The Physics Multiverse </p>

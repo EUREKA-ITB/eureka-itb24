@@ -1,5 +1,5 @@
 import Onboarding from "@/components/onboarding";
-import FooterPage from "../components/footer";
+import FooterPage from "@/components/footer";
 
 export default function Home() {
   return (
