@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { fontSans, fontSecondary } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
@@ -24,8 +25,14 @@ export default function RootLayout({
           fontSecondary.variable,
         )}
       >
-        {children}
-        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          disableTransitionOnChange
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
