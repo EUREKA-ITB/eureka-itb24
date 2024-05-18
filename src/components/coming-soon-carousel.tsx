@@ -20,8 +20,8 @@ export default function ComingSoonCarousel({
   return (
     <div className="flex w-max items-center -space-x-48">
       <MotionDiv
-        initial={false}
-        animate={{ x: "100%" }}
+        initial={{ translateX: "calc(-25%)" }}
+        animate={{ translateX: "calc(25%)" }}
         transition={{
           repeat: Infinity,
           duration: 25,
