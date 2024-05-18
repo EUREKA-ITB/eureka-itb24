@@ -1,21 +1,39 @@
+import Link from "next/link";
 import React from "react";
+import { FaInstagram, FaSquareFacebook, FaXTwitter } from "react-icons/fa6";
 
-import { Avatar, AvatarFallback } from "./ui/avatar";
+import { Button } from "./ui/button";
+
+const items = [
+  { name: "Twitter", icon: FaXTwitter, link: "https://x.com/eurekaitb" },
+  {
+    name: "Facebook",
+    icon: FaSquareFacebook,
+    link: "https://facebook.com/eurekaitb",
+  },
+  {
+    name: "Instagram",
+    icon: FaInstagram,
+    link: "https://instagram.com/eurekaitb",
+  },
+];
 
 export default function ComingSoonSocials() {
   return (
-    <div className="flex w-max flex-col justify-center gap-8 ">
-      <h3 className="text-3xl">Stay tuned on our social media</h3>
-      <div className="flex w-full items-center justify-evenly gap-2">
-        {[1, 2, 3].map((e) => (
-          <Avatar
-            className="size-16"
-            key={e + 100}
-          >
-            <AvatarFallback>{e}</AvatarFallback>
-          </Avatar>
-        ))}
-      </div>
+    <div className="flex w-full items-center justify-center gap-0 md:gap-8">
+      {items.map((item) => (
+        <Button
+          size="lg"
+          key={item.name}
+          variant="ghost"
+          className="p-8"
+          asChild
+        >
+          <Link href={item.link}>
+            <item.icon size={36} />
+          </Link>
+        </Button>
+      ))}
     </div>
   );
 }
