@@ -20,12 +20,17 @@ export default function ComingSoonCarousel({
   return (
     <div className="flex w-max items-center -space-x-48">
       <MotionDiv
-        initial={{ translateX: "calc(-25%)" }}
-        animate={{ translateX: "calc(25%)" }}
-        transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+        initial={false}
+        animate={{ x: "100%" }}
+        transition={{
+          repeat: Infinity,
+          duration: 25,
+          ease: "linear",
+          repeatType: "loop",
+        }}
         className="flex w-full items-center -space-x-48"
       >
-        {[...items, ...items].map((item, index) => (
+        {items.map((item, index) => (
           <div
             key={index.toString()}
             className="relative flex justify-center"
