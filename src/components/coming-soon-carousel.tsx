@@ -26,7 +26,6 @@ export default function ComingSoonCarousel({
           repeat: Infinity,
           duration: 25,
           ease: "linear",
-          repeatType: "loop",
         }}
         className="flex w-full items-center -space-x-48"
       >
