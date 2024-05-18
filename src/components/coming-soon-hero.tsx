@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ComingSoonHero() {
   return (
-    <section className="container flex h-[80vh] w-full flex-col items-center justify-center gap-4 text-center lg:h-[75vh]">
+    <section className="container flex h-[88vh] w-full flex-col items-center justify-center gap-4 text-center lg:h-[80vh]">
       <h3 className="text-3xl font-semibold md:text-4xl xl:text-6xl">
         EUREKA! ITB 2024
       </h3>
