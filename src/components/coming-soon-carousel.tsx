@@ -1,6 +1,8 @@
 import Image, { type StaticImageData } from "next/image";
 import React from "react";
 
+import MotionDiv from "./motion/motion-div";
+
 type TCarouselItemType = {
   src: StaticImageData;
   alt: string;
@@ -17,10 +19,15 @@ export default function ComingSoonCarousel({
 }: TComingSoonCarouselProps) {
   return (
     <div className="flex w-max items-center -space-x-48">
-      <div className="flex w-full animate-infinite-horizontal-scroll items-center -space-x-48">
+      <MotionDiv
+        initial={{ translateX: "calc(-25%)" }}
+        animate={{ translateX: "calc(25%)" }}
+        transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+        className="flex w-full items-center -space-x-48"
+      >
         {[...items, ...items].map((item, index) => (
           <div
-            key={item.src.blurDataURL + index.toString()}
+            key={index.toString()}
             className="relative flex justify-center"
           >
             <Image
@@ -29,8 +36,11 @@ export default function ComingSoonCarousel({
               alt={item.alt}
               width={840}
               height={472.5}
-              style={{ backgroundSize: "cover" }}
-              className="constrast-200 h-[520px] w-[840px] rounded-[3rem] bg-cover brightness-75 saturate-0 transition-all ease-in"
+              style={{
+                backgroundSize: "cover",
+                filter: "saturate(0) contrast(1.2) brightness(.75)",
+              }}
+              className="h-[520px] w-[840px] rounded-[3rem] bg-cover brightness-75 contrast-200 saturate-0 transition-all ease-in"
             />
 
             <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-b from-background via-background/30 to-transparent" />
@@ -38,7 +48,7 @@ export default function ComingSoonCarousel({
             <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-t from-background via-background/30 to-transparent" />
           </div>
         ))}
-      </div>
+      </MotionDiv>
     </div>
   );
 }
