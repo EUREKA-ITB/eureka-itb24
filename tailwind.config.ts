@@ -140,18 +140,18 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "horizontal-scroll": {
-          from: { transform: "translateX(-3rem)" },
-          to: { transform: "translateX(calc(-50% - 3rem))" },
+        "horizontal-carousel": {
+          from: { transform: "translateX(calc(-25%))" },
+          to: { transform: "translateX(calc(25%))" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "infinite-horizontal-scroll": "horizontal-scroll 35s linear infinite",
+        "infinite-horizontal-scroll": "horizontal-carousel 35s linear infinite",
       },
       backgroundImage: {
-        stars: "url('@/../public/stars.png')",
+        stars: "url('./../../public/stars.png')",
       },
     },
   },
