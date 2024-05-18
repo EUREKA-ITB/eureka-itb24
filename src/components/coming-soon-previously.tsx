@@ -2,6 +2,7 @@ import bg1 from "@/../public/DSC02956.png";
 import bg2 from "@/../public/DSC_0030.png";
 import bg3 from "@/../public/DSC_0192.png";
 import bg4 from "@/../public/IMG_0009.png";
+import bg5 from "@/../public/IMG_0151.png";
 
 import ComingSoonCarousel from "./coming-soon-carousel";
 
@@ -23,6 +24,11 @@ const items = [
   },
   {
     src: bg4,
+    title: "EUREKA! ITB 2020",
+    alt: "EUREKA! ITB 2020",
+  },
+  {
+    src: bg5,
     title: "EUREKA! ITB 2020",
     alt: "EUREKA! ITB 2020",
   },
