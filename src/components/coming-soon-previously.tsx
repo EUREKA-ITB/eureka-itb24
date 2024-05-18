@@ -37,7 +37,7 @@ const items = [
 export default function ComingSoonPreviously() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center gap-8">
-      <h2 className="absolute -top-10 z-[1] mx-16 text-balance rounded-full bg-background/60 px-6 py-4 text-center text-2xl font-semibold shadow-2xl shadow-background drop-shadow-[0px_50px_96px_rgba(1,_170,_185,_0.5)] backdrop-blur sm:px-16 md:px-32 md:text-3xl xl:text-4xl">
+      <h2 className="xs:text-2xl absolute -top-10 z-[1] mx-16 text-balance rounded-full bg-background/60 px-6 py-4 text-center text-xl font-semibold shadow-2xl shadow-background drop-shadow-[0px_50px_96px_rgba(1,_170,_185,_0.5)] backdrop-blur sm:px-16 md:px-32 md:text-3xl xl:text-4xl">
         Our previous journey
       </h2>
 
