@@ -36,36 +36,74 @@ const items = [
 
 export default function ComingSoonGallery() {
   return (
-    <div className="grid w-max grid-cols-3">
-      {items.map((item, index) => (
-        <div
-          key={index.toString()}
-          className="group relative flex size-full justify-center overflow-hidden hover:cursor-pointer"
-        >
-          <Image
-            quality={25}
-            src={item.src}
-            alt={item.alt}
-            width={840}
-            height={472.5}
-            // seems like className filter doesn't work in safari,
-            // therefore this inline style is added for compatibility
-            style={{ filter: "brightness(.75) saturate(0) contrast(1.25)" }}
-            className="h-[472.5px] bg-cover brightness-75 contrast-125 saturate-0 group-hover:brightness-105 group-hover:contrast-100 group-hover:saturate-150 group-hover:filter"
-          />
+    <div className="flex w-full flex-col justify-center gap-0">
+      <div className="no-scrollbar w-full overflow-x-auto">
+        <div className="grid w-max grid-cols-3">
+          {items.slice(0, 3).map((item, index) => (
+            <div
+              key={index.toString()}
+              className="group relative flex size-full justify-center overflow-hidden hover:cursor-pointer"
+            >
+              <Image
+                quality={25}
+                src={item.src}
+                alt={item.alt}
+                width={840}
+                height={472.5}
+                // seems like className filter doesn't work in safari,
+                // therefore this inline style is added for compatibility
+                style={{ filter: "brightness(.75) saturate(0) contrast(1.25)" }}
+                className="h-[472.5px] bg-cover brightness-75 contrast-125 saturate-0 group-hover:brightness-105 group-hover:contrast-100 group-hover:saturate-150 group-hover:filter"
+              />
 
-          <h1 className="absolute -bottom-16 z-[1] text-4xl font-bold opacity-40 shadow-xl drop-shadow-xl transition-all ease-in-out group-hover:bottom-16 lg:text-5xl">
-            {item.alt}
-          </h1>
+              <h1 className="absolute -bottom-16 z-[1] text-4xl font-bold opacity-40 shadow-xl drop-shadow-xl transition-all ease-in-out group-hover:bottom-16 lg:text-5xl">
+                {item.alt}
+              </h1>
 
-          {/* Below is for color gradient masking */}
-          <div className="absolute top-1/2 size-full -translate-y-1/2 from-accent/50 via-accent/5 to-transparent blur group-hover:bg-gradient-to-t" />
-          <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-b from-background via-background/30 to-transparent" />
-          <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-r from-background via-background/5 to-transparent" />
-          <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-l from-background via-background/5 to-transparent" />
-          <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-t from-background via-background/30 to-transparent" />
+              {/* Below is for color gradient masking */}
+              <div className="absolute top-1/2 size-full -translate-y-1/2 from-accent/50 via-accent/5 to-transparent blur group-hover:bg-gradient-to-t" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-b from-background via-background/30 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-r from-background via-background/5 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-l from-background via-background/5 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-t from-background via-background/30 to-transparent" />
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
+
+      <div className="no-scrollbar w-full overflow-x-auto">
+        <div className="grid w-max grid-cols-3">
+          {items.slice(3).map((item, index) => (
+            <div
+              key={index.toString()}
+              className="group relative flex size-full justify-center overflow-hidden hover:cursor-pointer"
+            >
+              <Image
+                quality={25}
+                src={item.src}
+                alt={item.alt}
+                width={840}
+                height={472.5}
+                // seems like className filter doesn't work in safari,
+                // therefore this inline style is added for compatibility
+                style={{ filter: "brightness(.75) saturate(0) contrast(1.25)" }}
+                className="h-[472.5px] bg-cover brightness-75 contrast-125 saturate-0 group-hover:brightness-105 group-hover:contrast-100 group-hover:saturate-150 group-hover:filter"
+              />
+
+              <h1 className="absolute -bottom-16 z-[1] text-4xl font-bold opacity-40 shadow-xl drop-shadow-xl transition-all ease-in-out group-hover:bottom-16 lg:text-5xl">
+                {item.alt}
+              </h1>
+
+              {/* Below is for color gradient masking */}
+              <div className="absolute top-1/2 size-full -translate-y-1/2 from-accent/50 via-accent/5 to-transparent blur group-hover:bg-gradient-to-t" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-b from-background via-background/30 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-r from-background via-background/5 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-l from-background via-background/5 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-t from-background via-background/30 to-transparent" />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
