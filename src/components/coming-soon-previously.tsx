@@ -1,38 +1,4 @@
-import bg1 from "@/../public/DSC02956.png";
-import bg2 from "@/../public/DSC_0030.png";
-import bg3 from "@/../public/DSC_0192.png";
-import bg4 from "@/../public/IMG_0009.png";
-import bg5 from "@/../public/IMG_0151.png";
-
-import ComingSoonCarousel from "./coming-soon-carousel";
-
-const items = [
-  {
-    src: bg1,
-    title: "EUREKA! ITB 2020",
-    alt: "EUREKA! ITB 2020",
-  },
-  {
-    src: bg2,
-    title: "EUREKA! ITB 2020",
-    alt: "EUREKA! ITB 2020",
-  },
-  {
-    src: bg3,
-    title: "EUREKA! ITB 2020",
-    alt: "EUREKA! ITB 2020",
-  },
-  {
-    src: bg4,
-    title: "EUREKA! ITB 2020",
-    alt: "EUREKA! ITB 2020",
-  },
-  {
-    src: bg5,
-    title: "EUREKA! ITB 2020",
-    alt: "EUREKA! ITB 2020",
-  },
-];
+import ComingSoonGallery from "./coming-soon-gallery";
 
 export default function ComingSoonPreviously() {
   return (
@@ -41,7 +7,7 @@ export default function ComingSoonPreviously() {
         Our previous journey
       </h2>
 
-      <ComingSoonCarousel items={items} />
+      <ComingSoonGallery />
 
       <p className="text-md absolute -bottom-8 z-[1] mx-16 text-balance rounded-full bg-background/40 px-6 py-4 text-center font-light shadow-2xl shadow-background drop-shadow-[0px_-50px_96px_rgba(1,_170,_185,_0.5)] backdrop-blur sm:px-6 sm:text-lg md:px-12 md:text-xl xl:text-2xl">
         The last EUREKA! ITB that was held offline was EUREKA! ITB 2020.
