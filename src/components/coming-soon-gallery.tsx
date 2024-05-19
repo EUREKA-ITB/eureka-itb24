@@ -48,6 +48,9 @@ export default function ComingSoonGallery() {
             alt={item.alt}
             width={840}
             height={472.5}
+            // seems like className filter doesn't work in safari,
+            // therefore this inline style is added for compatibility
+            style={{ filter: "brightness(.75) saturate(0) contrast(1.25)" }}
             className="h-[472.5px] bg-cover brightness-75 contrast-125 saturate-0 group-hover:brightness-105 group-hover:contrast-100 group-hover:saturate-150 group-hover:filter"
           />
 
@@ -56,7 +59,7 @@ export default function ComingSoonGallery() {
           </h1>
 
           {/* Below is for color gradient masking */}
-          <div className="absolute top-1/2 size-full -translate-y-1/2 from-accent via-accent/5 to-transparent blur group-hover:bg-gradient-to-t" />
+          <div className="absolute top-1/2 size-full -translate-y-1/2 from-accent/50 via-accent/5 to-transparent blur group-hover:bg-gradient-to-t" />
           <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-b from-background via-background/30 to-transparent" />
           <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-r from-background via-background/5 to-transparent" />
           <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-l from-background via-background/5 to-transparent" />
