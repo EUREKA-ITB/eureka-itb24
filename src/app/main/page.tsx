@@ -13,7 +13,7 @@ export default function Competition_List() {
         </h2>
       </div>
       <div className="flex flex-row space-x-5">
-        <div className="my-auto w-20 flex-shrink-0">
+        <div className="my-auto hidden w-20 flex-shrink-0 sm:block">
           <Image
             src={img_phyOlympiad}
             alt=""
@@ -36,7 +36,7 @@ export default function Competition_List() {
         </div>
       </div>
       <div className="flex flex-row space-x-5">
-        <div className="my-auto w-20 flex-shrink-0">
+        <div className="my-auto hidden w-20 flex-shrink-0 sm:block">
           <Image
             src={img_sciWriting}
             alt=""
