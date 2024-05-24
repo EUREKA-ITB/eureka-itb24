@@ -61,11 +61,11 @@ export default function ComingSoonGallery() {
               </h1>
 
               {/* Below is for color gradient masking */}
-              <div className="absolute top-1/2 size-full -translate-y-1/2 from-accent/50 via-accent/5 to-transparent blur group-hover:bg-gradient-to-t" />
-              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-b from-background via-background/30 to-transparent" />
-              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-r from-background via-background/5 to-transparent" />
-              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-l from-background via-background/5 to-transparent" />
-              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-t from-background via-background/30 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 border-8 border-background from-accent/50 via-accent/5 to-transparent blur group-hover:bg-gradient-to-t" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 border-8 border-background bg-gradient-to-b from-background via-background/30 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 border-8 border-background bg-gradient-to-r from-background via-background/5 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 border-8 border-background bg-gradient-to-l from-background via-background/5 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 border-8 border-background bg-gradient-to-t from-background via-background/30 to-transparent" />
             </div>
           ))}
         </div>
@@ -95,11 +95,11 @@ export default function ComingSoonGallery() {
               </h1>
 
               {/* Below is for color gradient masking */}
-              <div className="absolute top-1/2 size-full -translate-y-1/2 from-accent/50 via-accent/5 to-transparent blur group-hover:bg-gradient-to-t" />
-              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-b from-background via-background/30 to-transparent" />
-              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-r from-background via-background/5 to-transparent" />
-              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-l from-background via-background/5 to-transparent" />
-              <div className="absolute top-1/2 size-full -translate-y-1/2 bg-gradient-to-t from-background via-background/30 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 border-8 border-background from-accent/50 via-accent/5 to-transparent blur group-hover:bg-gradient-to-t" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 border-8 border-background bg-gradient-to-b from-background via-background/30 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 border-8 border-background bg-gradient-to-r from-background via-background/5 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 border-8 border-background bg-gradient-to-l from-background via-background/5 to-transparent" />
+              <div className="absolute top-1/2 size-full -translate-y-1/2 border-8 border-background bg-gradient-to-t from-background via-background/30 to-transparent" />
             </div>
           ))}
         </div>
