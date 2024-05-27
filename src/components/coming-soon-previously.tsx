@@ -9,7 +9,6 @@ export default function ComingSoonPreviously() {
 
       <ComingSoonGallery />
 
-      {/* TODO: fix the issue where this paragraph's position is different in safari */}
       <p className="text-md absolute -bottom-8 z-[1] mx-16 text-balance rounded-full bg-background/40 px-6 py-4 text-center font-light shadow-2xl shadow-background drop-shadow-[0px_-50px_96px_rgba(1,_170,_185,_0.5)] backdrop-blur sm:px-6 sm:text-lg md:px-12 md:text-xl xl:text-2xl">
         The last EUREKA! ITB that was held offline was EUREKA! ITB 2020.
       </p>
