@@ -1,5 +1,6 @@
 import img_phyOlympiad from "@/../public/img_phyOlympiad.svg";
 import img_sciWriting from "@/../public/img_sciWriting.svg";
+import CompetitionItems from "@/components/CompetitionItems";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 
@@ -12,52 +13,7 @@ export default function Competition_List() {
           Things that are waiting beyond the horizon
         </h2>
       </div>
-      <div className="flex flex-row space-x-5">
-        <div className="my-auto hidden w-20 flex-shrink-0 sm:block">
-          <Image
-            src={img_phyOlympiad}
-            alt=""
-          />
-        </div>
-        <div className="flex flex-col space-y-2">
-          <div className="flex flex-col justify-between md:flex-row">
-            <div className="text-4xl font-bold">PHYSICS OLYMPIAD </div>
-            <div className="my-auto flex-row space-x-4 space-y-4 md:space-y-0 ">
-              <Badge variant="default"> SMP/MTs</Badge>
-              <Badge variant="default">SD/MI</Badge>
-            </div>
-          </div>
-          <p>
-            We&apos;re no strangers to love You know the rules and so do I (do
-            I) A full commitment&apos;s what I&apos;m thinking of You
-            wouldn&apos;t get this from any other guy I just wanna tell you how
-            I&apos;m feeling Gotta make you understand
-          </p>
-        </div>
-      </div>
-      <div className="flex flex-row space-x-5">
-        <div className="my-auto hidden w-20 flex-shrink-0 sm:block">
-          <Image
-            src={img_sciWriting}
-            alt=""
-          />
-        </div>
-        <div className="flex flex-col space-y-2">
-          <div className="flex flex-col justify-between md:flex-row">
-            <div className="text-4xl font-bold">SCIENTIFIC WRITING </div>
-            <div className="my-auto flex-row space-x-4 space-y-4 md:space-y-0 ">
-              <Badge variant="default"> SMP/MTs</Badge>
-              <Badge variant="default">SD/MI</Badge>
-            </div>
-          </div>
-          <p>
-            We&apos;re no strangers to love You know the rules and so do I (do
-            I) A full commitment&apos;s what I&apos;m thinking of You
-            wouldn&apos;t get this from any other guy I just wanna tell you how
-            I&apos;m feeling Gotta make you understand
-          </p>
-        </div>
-      </div>
+      <CompetitionItems />
     </div>
   );
 }
