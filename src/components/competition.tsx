@@ -1,7 +1,6 @@
 import img_phyOlympiad from "@/../public/img_phyOlympiad.svg";
 import img_sciWriting from "@/../public/img_sciWriting.svg";
-import CompetitionItem_Component from "@/components/competition-item";
-import { TCompetitions } from "@/components/competition-item";
+import CompetitionItem, { TCompetitions } from "@/components/competition-item";
 
 const competitions: TCompetitions[] = [
   {
@@ -20,7 +19,7 @@ const competitions: TCompetitions[] = [
   },
 ];
 
-export default function Competition_List() {
+export default function Competition() {
   return (
     <div className="flex flex-col space-y-10 px-10 xl:container sm:px-20 xl:px-20">
       <div className="flex flex-col items-center text-center">
@@ -30,7 +29,7 @@ export default function Competition_List() {
         </h2>
       </div>
       {competitions.map((competition) => (
-        <CompetitionItem_Component
+        <CompetitionItem
           key={competition.name}
           {...competition}
         />

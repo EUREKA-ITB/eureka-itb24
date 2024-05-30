@@ -10,13 +10,13 @@ export type TCompetitions = {
   image: StaticImageData;
 };
 
-export default function CompetitionItem_Component(competition: TCompetitions) {
+export default function CompetitionItem(competition: TCompetitions) {
   return (
     <div className="flex flex-row gap-5">
       <div className="my-auto hidden w-20 flex-shrink-0 sm:block">
         <Image
           src={competition.image}
-          alt=""
+          alt={competition.name}
         />
       </div>
       <div className="flex flex-col gap-3">
