@@ -1,6 +1,24 @@
-import { competitions } from "@/components/CompetitionItems";
-import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
+import img_phyOlympiad from "@/../public/img_phyOlympiad.svg";
+import img_sciWriting from "@/../public/img_sciWriting.svg";
+import CompetitionItem_Component from "@/components/competition-item";
+import { TCompetitions } from "@/components/competition-item";
+
+const competitions: TCompetitions[] = [
+  {
+    name: "PHYSICS OLYMPIAD",
+    levels: ["SMP/MTs", "SD/MI"],
+    description:
+      "We're no strangers to love You know the rules and so do I (do I) A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand",
+    image: img_sciWriting,
+  },
+  {
+    name: "SCIENTIFIC WRITING",
+    levels: ["SMP/MTs", "SD/MI"],
+    description:
+      "Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you",
+    image: img_phyOlympiad,
+  },
+];
 
 export default function Competition_List() {
   return (
@@ -11,34 +29,11 @@ export default function Competition_List() {
           Things that are waiting beyond the horizon
         </h2>
       </div>
-      {competitions.map((competitions) => (
-        <div
-          key={null}
-          className="flex flex-row space-x-5"
-        >
-          <div className="my-auto hidden w-20 flex-shrink-0 sm:block">
-            <Image
-              src={competitions.image}
-              alt=""
-            />
-          </div>
-          <div className="flex flex-col space-y-2">
-            <div className="flex flex-col justify-between md:flex-row">
-              <div className="text-4xl font-bold">{competitions.name}</div>
-              <div className="my-auto flex-row space-x-4 space-y-4 md:space-y-0 ">
-                {competitions.levels.map((a) => (
-                  <Badge
-                    key={null}
-                    variant="default"
-                  >
-                    {a}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-            <p>{competitions.description}</p>
-          </div>
-        </div>
+      {competitions.map((competition) => (
+        <CompetitionItem_Component
+          key={competition.name}
+          {...competition}
+        />
       ))}
     </div>
   );
