@@ -6,7 +6,7 @@ import ComingSoonSocials from "@/components/coming-soon-socials";
 export default function Home() {
   return (
     <main className="flex size-full min-h-screen flex-col gap-0 overflow-hidden pb-16">
-      <div className="bg-stars relative">
+      <div className="relative bg-stars">
         <ComingSoonHero />
 
         <ComingSoonMultiline />
