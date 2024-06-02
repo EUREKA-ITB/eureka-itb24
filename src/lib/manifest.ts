@@ -5,17 +5,17 @@ export const manifestData = {
     {
       purpose: "maskable" as const,
       sizes: "512x512",
-      src: "../../public/metadata/icon512_maskable.png",
+      src: "/../../public/metadata/icon512_maskable.png",
       type: "image/png",
     },
     {
       purpose: "any" as const,
       sizes: "512x512",
-      src: "../../public/metadata/icon512_rounded.png",
+      src: "/../../public/metadata/icon512_rounded.png",
       type: "image/png",
     },
     {
-      src: "../app/favicon.ico",
+      src: "/favicon.ico",
       sizes: "any" as const,
       type: "image/x-icon",
     },

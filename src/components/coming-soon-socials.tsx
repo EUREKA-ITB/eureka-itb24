@@ -29,7 +29,12 @@ export default function ComingSoonSocials() {
           className="p-8"
           asChild
         >
-          <Link href={item.link}>
+          <Link
+            aria-label={item.name}
+            id={item.name}
+            about={item.name}
+            href={item.link}
+          >
             <item.icon size={36} />
           </Link>
         </Button>
