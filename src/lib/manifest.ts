@@ -1,3 +1,6 @@
+import icon512_maskable from "@/../public/metadata/icon512_maskable.png";
+import icon512_rounded from "@/../public/metadata/icon512_rounded.png";
+
 export const manifestData = {
   theme_color: "#01A8B7",
   background_color: "#121212",
@@ -5,13 +8,13 @@ export const manifestData = {
     {
       purpose: "maskable" as const,
       sizes: "512x512",
-      src: "/../../public/metadata/icon512_maskable.png",
+      src: icon512_maskable.src,
       type: "image/png",
     },
     {
       purpose: "any" as const,
       sizes: "512x512",
-      src: "/../../public/metadata/icon512_rounded.png",
+      src: icon512_rounded.src,
       type: "image/png",
     },
     {

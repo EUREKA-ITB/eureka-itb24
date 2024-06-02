@@ -7,6 +7,7 @@ export const metadataData: Metadata = {
   applicationName: "EUREKA! ITB",
   publisher: "EUREKA! ITB 2024",
   creator: "Tim IT EUREKA! ITB 2024",
+  metadataBase: new URL("https://eurekaitb.com"),
   authors: [
     { name: "Muhammad Afief Abdurrahman", url: "https://afief.toscamedia.net" },
     { name: "Richard Daniel Sihombing" },
