@@ -19,7 +19,7 @@ export const manifestData = {
     },
     {
       src: "/favicon.ico",
-      sizes: "any" as const,
+      sizes: "96x96",
       type: "image/x-icon",
     },
   ],
