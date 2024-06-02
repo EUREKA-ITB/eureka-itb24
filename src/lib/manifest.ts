@@ -1,30 +1,28 @@
-import type { MetadataRoute } from "next";
-
-export const manifestData: MetadataRoute.Manifest = {
+export const manifestData = {
   theme_color: "#01A8B7",
   background_color: "#121212",
   icons: [
     {
-      purpose: "maskable",
+      purpose: "maskable" as const,
       sizes: "512x512",
       src: "../../public/metadata/icon512_maskable.png",
       type: "image/png",
     },
     {
-      purpose: "any",
+      purpose: "any" as const,
       sizes: "512x512",
       src: "../../public/metadata/icon512_rounded.png",
       type: "image/png",
     },
     {
       src: "../app/favicon.ico",
-      sizes: "any",
+      sizes: "any" as const,
       type: "image/x-icon",
     },
   ],
-  orientation: "any",
-  display: "standalone",
-  dir: "ltr",
+  orientation: "any" as const,
+  display: "standalone" as const,
+  dir: "ltr" as const,
   lang: "en-US",
   name: "EUREKA! ITB 2024",
   short_name: "EUREKA! ITB",
