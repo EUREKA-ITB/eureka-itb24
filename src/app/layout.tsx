@@ -1,8 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/sonner";
 import { fontSans, fontSecondary } from "@/lib/fonts";
-import { metadataData } from "@/lib/metadata";
-import { cn } from "@/lib/utils";
+import { metadata as metadataData } from "@/lib/metadata";
+import { cn } from "@/lib/utils/shadcn-utils";
 import type { Metadata } from "next";
 
 import "./globals.css";
@@ -15,12 +14,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      suppressHydrationWarning
+    >
       <body
         className={cn(
-          "font-sans antialiased",
-          fontSans.variable,
-          fontSecondary.variable,
+          "antialiased",
+          fontSans.className,
+          fontSecondary.className,
         )}
       >
         <ThemeProvider
@@ -29,7 +31,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <Toaster />
         </ThemeProvider>
       </body>
     </html>

@@ -1,8 +1,9 @@
-import icon512_maskable from "@/../public/metadata/icon512_maskable.png";
-import icon512_rounded from "@/../public/metadata/icon512_rounded.png";
+import icon512_maskable from "@public/metadata/icon512_maskable.png";
+import icon512_rounded from "@public/metadata/icon512_rounded.png";
+import type { MetadataRoute } from "next";
 
-export const manifestData = {
-  theme_color: "#01A8B7",
+export const manifest: MetadataRoute.Manifest = {
+  theme_color: "#121212",
   background_color: "#121212",
   icons: [
     {
@@ -23,13 +24,12 @@ export const manifestData = {
       type: "image/x-icon",
     },
   ],
-  orientation: "any" as const,
+  orientation: "portrait-primary" as const,
   display: "standalone" as const,
   dir: "ltr" as const,
   lang: "en-US",
   name: "EUREKA! ITB 2024",
   short_name: "EUREKA! ITB",
-  start_url: "https://eurekaitb.com",
   description:
     "Acara kompetisi fisika tahunan yang diselenggarakan oleh EUREKA! ITB 2024, dan merupakan bagian dari HIMAFI ITB.",
   id: "eurekaitb-24",
