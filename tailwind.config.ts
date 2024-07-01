@@ -12,14 +12,24 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
       screens: {
-        "2xl": "1400px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
     },
     extend: {
       screens: {
-        xs: "420px",
+        xs: "480px",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -74,14 +84,26 @@ const config = {
           from: { backgroundPosition: "200% 0" },
           to: { backgroundPosition: "-200% 0" },
         },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         shine: "shine 8s ease-in-out infinite",
+        "meteor-effect": "meteor 5s linear infinite",
       },
       backgroundImage: {
-        stars: "url('@public/stars.png')",
+        stars: "url('../../public/stars.png')",
+      },
+      dropShadow: {
+        "blue-glow": "0px 0px 16px rgba(1,170,185,1)",
       },
     },
   },
