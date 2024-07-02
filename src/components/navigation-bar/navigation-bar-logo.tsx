@@ -10,7 +10,7 @@ export default function NavigationBarLogo() {
       <Image
         src="/logo_e.png"
         alt="Logo EUREKA! ITB"
-        style={{ height: 50, width: "auto" }}
+        style={{ height: 46, width: "auto" }}
         width="0"
         height="0"
       />

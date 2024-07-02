@@ -14,9 +14,11 @@ export default function GalleryCard(props: TGalleryCardProps) {
         src={props.image.src}
         alt={props.image.alt}
         fill
-        className="object-cover object-center grayscale transition-all group-hover:brightness-125 group-hover:contrast-125 group-hover:grayscale-0 group-hover:saturate-100"
-        priority
+        className="z-[1] object-cover object-center grayscale transition-all group-hover:brightness-125 group-hover:contrast-125 group-hover:grayscale-0 group-hover:saturate-100"
+        loading="lazy"
       />
+
+      <div className="z-0 size-full animate-pulse bg-gradient-to-tr from-blue-950 to-yellow-200/20" />
     </Card>
   );
 }

@@ -1,5 +1,4 @@
 import { Meteors } from "@/components/aceternity/meteors";
-import Image from "next/image";
 
 import Gallery from "./_components/gallery/gallery";
 import HeroBackground from "./_components/hero/hero-background";
@@ -15,7 +14,7 @@ export default function Home() {
 
         <Meteors
           className="right-0 top-0 -z-10 -translate-y-1/2 translate-x-1/2"
-          number={20}
+          number={10}
         />
 
         <Gallery />
