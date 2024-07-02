@@ -9,7 +9,7 @@ type TGalleryCardProps = {
 
 export default function GalleryCard(props: TGalleryCardProps) {
   return (
-    <Card className="group relative h-[20vh] w-[40rem] -translate-x-4 -translate-y-9 cursor-pointer overflow-hidden border-4 border-background transition-all ease-out sm:aspect-[2/3] sm:h-[55vh] sm:w-[40rem] sm:hover:-translate-y-4 sm:hover:rotate-2 md:hover:-translate-y-20">
+    <Card className="group relative h-[20vh] w-[50rem] cursor-pointer overflow-hidden border-4 border-background transition-all ease-out md:aspect-[2/3] md:h-[55vh] md:w-[40rem] md:hover:-translate-y-4 md:hover:rotate-2 lg:hover:-translate-y-12">
       <Image
         src={props.image.src}
         alt={props.image.alt}

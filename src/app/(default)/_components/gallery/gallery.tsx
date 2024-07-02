@@ -7,16 +7,19 @@ export default function Gallery() {
   const images = getGalleryImages();
 
   return (
-    <div className="max-h-[45vh] flex-grow flex-col items-center lg:max-h-[35vh]">
-      <MotionDiv className="relative z-10 -mt-28 grid grid-rows-3 place-items-center first:z-0 first:-rotate-3 first:pt-28 sm:grid-cols-3 first:lg:-mr-14 first:xl:-mr-20">
+    <div className="h-[45vh] flex-grow flex-col items-center lg:h-[35vh]">
+      <MotionDiv className="relative z-10 -ml-4 grid grid-rows-3 place-items-center first:z-0 first:-rotate-3 md:grid-cols-3 first:lg:-mr-14 first:xl:-mr-20">
         {images.map((image) => (
-          <div key={image.src}>
+          <div
+            className="translate-y-0 transition-all first:translate-y-0 last:translate-y-0 md:-translate-y-8 lg:translate-y-0 lg:first:-translate-y-12 lg:first:rotate-12 lg:last:-translate-y-12 lg:last:-rotate-6"
+            key={image.src}
+          >
             <GalleryCard image={image} />
           </div>
         ))}
       </MotionDiv>
 
-      <div className="pointer-events-none absolute bottom-0 z-20 h-[35rem] w-full bg-gradient-to-t from-background to-transparent lg:h-[30rem]" />
+      <div className="pointer-events-none absolute bottom-0 z-20 h-2/5 w-full bg-gradient-to-t from-background to-transparent" />
     </div>
   );
 }

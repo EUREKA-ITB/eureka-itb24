@@ -1,4 +1,5 @@
 import { Meteors } from "@/components/aceternity/meteors";
+import Image from "next/image";
 
 import Gallery from "./_components/gallery/gallery";
 import HeroBackground from "./_components/hero/hero-background";
@@ -6,19 +7,19 @@ import HeroText from "./_components/hero/hero-text";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-grow flex-col overflow-hidden">
-      <div className="relative flex w-full flex-grow justify-center">
-        <HeroBackground />
+    <>
+      <HeroBackground />
 
+      <div className="relative flex flex-grow flex-col overflow-hidden">
         <HeroText />
 
         <Meteors
           className="right-0 top-0 -z-10 -translate-y-1/2 translate-x-1/2"
           number={20}
         />
-      </div>
 
-      <Gallery />
-    </div>
+        <Gallery />
+      </div>
+    </>
   );
 }

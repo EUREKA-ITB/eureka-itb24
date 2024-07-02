@@ -1,5 +1,7 @@
 import getNavigationBarMenu from "@/lib/repositories/getNavigationBarMenu";
+import { cn } from "@/lib/utils/shadcn-utils";
 import Link from "next/link";
+import { IoMdLogIn } from "react-icons/io";
 
 import { buttonVariants } from "../shadcn-ui/button";
 
@@ -7,7 +9,7 @@ export default function NavigationBarMenu() {
   const items = getNavigationBarMenu();
 
   return (
-    <div className="flex items-center gap-2 text-sm">
+    <div className="flex items-center gap-0 text-sm xs:gap-2">
       {items.map((item) => (
         <Link
           className={buttonVariants({ variant: "linkHover2" })}
@@ -20,9 +22,22 @@ export default function NavigationBarMenu() {
 
       <Link
         href="https://dashboard.eurekaitb.com/"
-        className={buttonVariants({ variant: "shine", size: "sm" })}
+        className={cn(
+          buttonVariants({ variant: "shine", size: "sm" }),
+          "hidden xs:flex",
+        )}
       >
         Dashboard
+      </Link>
+
+      <Link
+        href="https://dashboard.eurekaitb.com/"
+        className={cn(
+          buttonVariants({ variant: "shine", size: "icon" }),
+          "xs:hidden",
+        )}
+      >
+        <IoMdLogIn size={20} />
       </Link>
     </div>
   );
