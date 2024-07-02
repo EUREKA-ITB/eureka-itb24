@@ -15,6 +15,7 @@ export default function GalleryCard(props: TGalleryCardProps) {
         alt={props.image.alt}
         fill
         className="object-cover object-center grayscale transition-all group-hover:brightness-125 group-hover:contrast-125 group-hover:grayscale-0 group-hover:saturate-100"
+        priority
       />
     </Card>
   );
