@@ -6,7 +6,7 @@ export default function HeroBackground() {
       <Image
         src="/line_yellow.png"
         alt="Yellow line"
-        className="pointer-events-none absolute left-0 top-0 z-[1] shrink-0 -translate-y-1/4 object-contain mix-blend-exclusion md:-translate-y-[20%]"
+        className="pointer-events-none absolute left-0 top-0 z-[1] shrink-0 -translate-y-1/4 object-contain mix-blend-exclusion md:-translate-y-[18%]"
         style={{ width: "100%", height: "100%" }}
         loading="lazy"
         fill
@@ -15,15 +15,16 @@ export default function HeroBackground() {
       <Image
         src="/line_blue.png"
         alt="Blue line"
-        className="pointer-events-none absolute left-0 top-0 z-0 shrink-0 -translate-y-1/4 object-contain mix-blend-exclusion md:-translate-y-[20%]"
+        className="pointer-events-none absolute left-0 top-0 z-0 shrink-0 -translate-y-[27%] object-contain mix-blend-exclusion md:-translate-y-[22%]"
         style={{ width: "100%", height: "100%" }}
         loading="lazy"
         fill
       />
+
       <Image
         src="/stars.png"
         alt="Stars background"
-        className="pointer-events-none shrink-0 object-cover object-top"
+        className="pointer-events-none -z-[1] shrink-0 object-cover object-top opacity-10"
         style={{ width: "100%", height: "100%" }}
         fill
         priority

@@ -5,7 +5,7 @@ export default function NavigationBarLogo() {
   return (
     <Link
       href="/"
-      className="flex items-center text-2xl font-bold [text-shadow:4px_2px_16px_white]"
+      className="flex items-center font-sans text-2xl font-bold [text-shadow:4px_2px_16px_white]"
     >
       <Image
         src="/logo_e.png"

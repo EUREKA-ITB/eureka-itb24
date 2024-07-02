@@ -7,7 +7,9 @@ export default function DefaultRootLayout({
   return (
     <div className="flex size-full min-h-screen flex-col">
       <NavigationBar />
-      <main className="relative flex flex-grow">{children}</main>
+
+      <main className="relative flex flex-grow flex-col">{children}</main>
+
       <Footer />
     </div>
   );

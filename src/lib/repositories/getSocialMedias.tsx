@@ -1,16 +1,16 @@
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 
 export default function getSocialMedias() {
   return [
     {
-      label: "X / Twitter",
-      href: "https://x.com/eurekaitb/",
-      icon: <FaTwitter size={16} />,
+      label: "Tiktok",
+      href: "https://www.tiktok.com/@eurekaitb",
+      icon: <FaTiktok size={16} />,
     },
     {
-      label: "Facebook",
-      href: "https://facebook.com/eurekaitb/",
-      icon: <FaFacebook size={16} />,
+      label: "YouTube",
+      href: "https://www.youtube.com/@eurekaitb400",
+      icon: <FaYoutube size={16} />,
     },
     {
       label: "Instagram",

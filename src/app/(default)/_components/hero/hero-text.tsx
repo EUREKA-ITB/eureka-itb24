@@ -16,7 +16,7 @@ export default function HeroText() {
         initial={{ translateY: 10, scale: 0.9, opacity: 0 }}
         animate={{ translateY: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 0.3 }}
-        className="text-5xl font-bold tracking-tight drop-shadow-blue-glow xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[9.5rem] xl:tracking-tighter"
+        className="font-sans text-6xl font-bold tracking-tight drop-shadow-blue-glow sm:text-7xl md:text-8xl lg:text-9xl xl:text-[9.5rem] xl:tracking-tighter"
       >
         EUREKA! ITB
       </MotionH1>
@@ -25,7 +25,7 @@ export default function HeroText() {
         initial={{ translateY: -10, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.3 }}
-        className="text-2xl font-light md:text-3xl xl:text-4xl"
+        className="text-xl font-light sm:text-2xl md:text-3xl xl:text-4xl"
       >
         The Physics Multiverse
       </MotionH3>
