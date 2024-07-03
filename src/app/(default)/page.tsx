@@ -1,12 +1,16 @@
 import { fontSecondary } from "@/lib/fonts";
 import { cn } from "@/lib/utils/shadcn-utils";
+import dynamic from "next/dynamic";
 
 import Gallery from "./_components/gallery/gallery";
-import HeroBackground from "./_components/hero/hero-background";
 import HeroText from "./_components/hero/hero-text";
 import TimelineTree from "./_components/timeline/timeline-tree";
 import SchrodiCameo from "./_components/what-is-eureka/schrodi-cameo";
 import WhatIsEureka from "./_components/what-is-eureka/what-is-eureka";
+
+const HeroBackground = dynamic(
+  () => import("./_components/hero/hero-background"),
+);
 
 export default function Home() {
   return (
