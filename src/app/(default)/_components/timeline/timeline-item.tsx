@@ -7,7 +7,7 @@ import TimelineDot from "./timeline-dot";
 type TTimelineItemProps = {
   position: "left" | "right";
   eventTitle: string;
-  eventDescription: string;
+  eventDate: string;
 };
 
 const animation: Variants = {
@@ -32,7 +32,7 @@ export default function TimelineItem(props: TTimelineItemProps) {
         variants={animation}
         transition={{ delay: 0.05 }}
         className={cn(
-          "my-3 flex w-fit max-w-52 flex-col justify-center gap-2 text-balance text-center xs:absolute xs:max-w-48",
+          "my-3 flex w-fit max-w-52 flex-col justify-center gap-2 text-balance text-center xs:absolute xs:max-w-full",
           props.position === "right"
             ? "xs:left-1/2 xs:ml-10 xs:text-left"
             : "xs:right-1/2 xs:mr-10 xs:text-right",
@@ -42,7 +42,7 @@ export default function TimelineItem(props: TTimelineItemProps) {
           {props.eventTitle}
         </h1>
 
-        <p className="font-sans text-sm">{props.eventDescription}</p>
+        <p className="font-sans text-sm">{props.eventDate}</p>
       </MotionDiv>
     </div>
   );

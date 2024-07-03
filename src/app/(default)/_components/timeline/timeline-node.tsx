@@ -5,7 +5,7 @@ type TTimelineNodeProps = {
   index: number;
   type?: "first" | "default" | "last";
   eventTitle: string;
-  eventDescription: string;
+  eventDate: string;
 };
 
 export default function TimelineNode({
@@ -29,7 +29,7 @@ export default function TimelineNode({
 
             <TimelineItem
               eventTitle={props.eventTitle}
-              eventDescription={props.eventDescription}
+              eventDate={props.eventDate}
               position={position}
             />
 
@@ -49,7 +49,7 @@ export default function TimelineNode({
 
           <TimelineItem
             eventTitle={props.eventTitle}
-            eventDescription={props.eventDescription}
+            eventDate={props.eventDate}
             position={position}
           />
         </div>
@@ -64,7 +64,7 @@ export default function TimelineNode({
 
           <TimelineItem
             eventTitle={props.eventTitle}
-            eventDescription={props.eventDescription}
+            eventDate={props.eventDate}
             position={position}
           />
 

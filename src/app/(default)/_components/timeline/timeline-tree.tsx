@@ -1,11 +1,19 @@
+import type { TCompetitionType } from "../../_models/timeline-interfaces";
 import getEvents from "../../_repositories/getEvents";
 import TimelineNode from "./timeline-node";
 
-export default function TimelineTree() {
-  const events = getEvents();
+type TTimelineTreeProps = {
+  type: TCompetitionType;
+};
+
+export default function TimelineTree(props: TTimelineTreeProps) {
+  const events = getEvents(props.type);
 
   return (
-    <div className="container flex w-full max-w-screen-sm flex-col items-center gap-2">
+    <div
+      id="timeline"
+      className="container flex w-full max-w-screen-md flex-col items-center gap-2"
+    >
       {events.map((event, index) => {
         if (index === 0) {
           return (
@@ -13,7 +21,7 @@ export default function TimelineTree() {
               type="first"
               index={index}
               eventTitle={event.title}
-              eventDescription={event.description}
+              eventDate={event.date}
               key={index + "timeline-first"}
             />
           );
@@ -23,7 +31,7 @@ export default function TimelineTree() {
               type="last"
               index={index}
               eventTitle={event.title}
-              eventDescription={event.description}
+              eventDate={event.date}
               key={index + "timeline-last"}
             />
           );
@@ -33,7 +41,7 @@ export default function TimelineTree() {
           <TimelineNode
             index={index}
             eventTitle={event.title}
-            eventDescription={event.description}
+            eventDate={event.date}
             key={index + "timeline-node"}
           />
         );
