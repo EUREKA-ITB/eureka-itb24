@@ -99,18 +99,25 @@ const config = {
             opacity: "0",
           },
         },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         shine: "shine 8s ease-in-out infinite",
         "meteor-effect": "meteor 5s linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
       backgroundImage: {
         stars: "url('../../public/stars.png')",
       },
       dropShadow: {
         "blue-glow": "0px 0px 16px rgba(1,170,185,1)",
+        "blue-glow-sm": "0px 0px 8px rgba(1,170,185,1)",
       },
     },
   },
