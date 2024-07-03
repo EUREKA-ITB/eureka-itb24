@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import { fontSans, fontSecondary } from "@/lib/fonts";
+import { fontSans } from "@/lib/fonts";
 import { metadata as metadataData } from "@/lib/metadata";
 import { cn } from "@/lib/utils/shadcn-utils";
 import type { Metadata } from "next";
@@ -18,13 +18,7 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
     >
-      <body
-        className={cn(
-          "antialiased",
-          fontSans.className,
-          fontSecondary.className,
-        )}
-      >
+      <body className={cn("antialiased", fontSans.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
