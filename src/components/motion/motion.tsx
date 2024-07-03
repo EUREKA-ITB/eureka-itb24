@@ -1,6 +1,8 @@
 "use client";
 
 import {
+  AnimatePresenceProps,
+  AnimatePresence as FramerAnimatePresence,
   type HTMLMotionProps,
   type SVGMotionProps,
   motion,
@@ -31,5 +33,13 @@ export function MotionLinearGradient(
 ) {
   return (
     <motion.linearGradient {...props}>{props.children}</motion.linearGradient>
+  );
+}
+
+export function AnimatePresence(
+  props: React.PropsWithChildren<AnimatePresenceProps>,
+) {
+  return (
+    <FramerAnimatePresence {...props}>{props.children}</FramerAnimatePresence>
   );
 }

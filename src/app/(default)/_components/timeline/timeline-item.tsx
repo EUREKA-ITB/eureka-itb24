@@ -1,13 +1,15 @@
 import { MotionDiv } from "@/components/motion/motion";
+import formatDateRange from "@/lib/repositories/formatDateRange";
 import { cn } from "@/lib/utils/shadcn-utils";
 import type { Variants } from "framer-motion";
 
+import type { TEventDate } from "../../_models/timeline-interfaces";
 import TimelineDot from "./timeline-dot";
 
 type TTimelineItemProps = {
   position: "left" | "right";
   eventTitle: string;
-  eventDate: string;
+  eventDate: TEventDate;
 };
 
 const animation: Variants = {
@@ -42,7 +44,9 @@ export default function TimelineItem(props: TTimelineItemProps) {
           {props.eventTitle}
         </h1>
 
-        <p className="font-sans text-sm">{props.eventDate}</p>
+        <p className="font-sans text-sm">
+          {formatDateRange(props.eventDate.start, props.eventDate.end)}
+        </p>
       </MotionDiv>
     </div>
   );

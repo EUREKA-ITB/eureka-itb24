@@ -22,7 +22,7 @@ export default function TimelineTree(props: TTimelineTreeProps) {
               index={index}
               eventTitle={event.title}
               eventDate={event.date}
-              key={index + "timeline-first"}
+              key={index + "timeline-first" + event.title}
             />
           );
         } else if (index === events.length - 1) {
@@ -32,7 +32,7 @@ export default function TimelineTree(props: TTimelineTreeProps) {
               index={index}
               eventTitle={event.title}
               eventDate={event.date}
-              key={index + "timeline-last"}
+              key={index + "timeline-last" + event.title}
             />
           );
         }
@@ -42,7 +42,7 @@ export default function TimelineTree(props: TTimelineTreeProps) {
             index={index}
             eventTitle={event.title}
             eventDate={event.date}
-            key={index + "timeline-node"}
+            key={index + "timeline-node" + event.title}
           />
         );
       })}

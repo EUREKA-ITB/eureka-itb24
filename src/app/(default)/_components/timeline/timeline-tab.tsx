@@ -13,7 +13,7 @@ export default function TimelineTab(props: TTimelineTabProps) {
   const isActive = (type: TCompetitionType) => type === props.tab;
 
   return (
-    <div className="flex w-full items-center gap-2 overflow-x-scroll">
+    <div className="no-scrollbar flex w-full items-center gap-2 overflow-x-scroll">
       {competitions.map((competition) => (
         <Button
           key={competition.slug}

@@ -1,23 +1,39 @@
-import type { TCompetitionType } from "../_models/timeline-interfaces";
+import dayjs from "dayjs";
+import "dayjs/locale/id";
 
-type TEvent = {
-  title: string;
-  date: string;
-};
+import type { TCompetitionType, TEvent } from "../_models/timeline-interfaces";
+
+dayjs.locale("id");
 
 export default function getEvents(type: TCompetitionType): TEvent[] {
   switch (type) {
     case "olympiad":
       return [
-        { title: "Registrasi", date: "10 Juli - 15 September 2024" },
-        { title: "Babak Penyisihan", date: "21 September 2024" },
         {
-          title: "Pengumuman Hasil Penyisihan",
-          date: "23 September 2024",
+          title: "Registrasi Olimpiade",
+          date: {
+            start: dayjs(new Date(2024, 6, 10, 23, 59, 59)),
+            end: dayjs(new Date(2024, 10, 15, 23, 59, 59)),
+          },
         },
         {
-          title: "Semifinal dan Final",
-          date: "27 - 29 September 2024",
+          title: "Babak Penyisihan Olimpiade",
+          date: {
+            start: dayjs(new Date(2024, 8, 21, 23, 59, 59)),
+          },
+        },
+        {
+          title: "Pengumuman Hasil Penyisihan Olimpiade",
+          date: {
+            start: dayjs(new Date(2024, 8, 23, 23, 59, 59)),
+          },
+        },
+        {
+          title: "Semifinal dan Final Olimpiade",
+          date: {
+            start: dayjs(new Date(2024, 8, 27, 23, 59, 59)),
+            end: dayjs(new Date(2024, 8, 29, 23, 59, 59)),
+          },
         },
       ];
 
@@ -25,25 +41,47 @@ export default function getEvents(type: TCompetitionType): TEvent[] {
       return [
         {
           title: "Registrasi dan Submisi Abstrak",
-          date: "10 Juli - 25 Agustus 2024",
+          date: {
+            start: dayjs(new Date(2024, 6, 10, 23, 59, 59)),
+            end: dayjs(new Date(2024, 7, 25, 23, 59, 59)),
+          },
         },
         {
           title: "Pengumuman Hasil Seleksi Abstrak",
-          date: "01 September 2024",
+          date: {
+            start: dayjs(new Date(2024, 8, 1, 23, 59, 59)),
+          },
         },
-        { title: "Pengumuman Full Paper", date: "02 - 19 September 2024" },
+        {
+          title: "Pengumuman Full Paper",
+          date: {
+            start: dayjs(new Date(2024, 8, 2, 23, 59, 59)),
+            end: dayjs(new Date(2024, 8, 19, 23, 59, 59)),
+          },
+        },
         {
           title: "Presentasi dan Pengumuman Pemenang",
-          date: "27 - 29 September 2024",
+          date: {
+            start: dayjs(new Date(2024, 9, 27, 23, 59, 59)),
+            end: dayjs(new Date(2024, 9, 29, 23, 59, 59)),
+          },
         },
       ];
 
     case "pre":
       return [
-        { title: "Lomba Komik dan Diseminasi", date: "24 Mei - 24 Juni 2024" },
+        {
+          title: "Lomba Komik dan Diseminasi",
+          date: {
+            start: dayjs(new Date(2024, 4, 24, 23, 59, 59)),
+            end: dayjs(new Date(2024, 5, 24, 23, 59, 59)),
+          },
+        },
         {
           title: "Pengumuman Lomba Komik dan Diseminasi",
-          date: "09 Juli 2024",
+          date: {
+            start: dayjs(new Date(2024, 6, 9, 23, 59, 59)),
+          },
         },
       ];
   }

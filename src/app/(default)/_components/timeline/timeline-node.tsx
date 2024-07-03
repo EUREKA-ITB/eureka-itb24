@@ -1,3 +1,4 @@
+import type { TEventDate } from "../../_models/timeline-interfaces";
 import TimelineItem from "./timeline-item";
 import TimelineLine from "./timeline-line";
 
@@ -5,7 +6,7 @@ type TTimelineNodeProps = {
   index: number;
   type?: "first" | "default" | "last";
   eventTitle: string;
-  eventDate: string;
+  eventDate: TEventDate;
 };
 
 export default function TimelineNode({
