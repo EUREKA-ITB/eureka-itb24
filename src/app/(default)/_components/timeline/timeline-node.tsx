@@ -1,6 +1,6 @@
 import type { TEventDate } from "../../_models/timeline-interfaces";
 import TimelineItem from "./timeline-item";
-import TimelineLine from "./timeline-line";
+import TimelineNodeLines from "./timeline-node-lines";
 
 type TTimelineNodeProps = {
   index: number;
@@ -13,66 +13,19 @@ export default function TimelineNode({
   type = "default",
   ...props
 }: TTimelineNodeProps) {
-  const topLinesArray = Array(5).fill(0);
-  const nodeLinesArray = Array(2).fill(0);
   const position = props.index % 2 === 0 ? "left" : "right";
 
-  switch (type) {
-    case "first":
-      return (
-        <div className="relative flex w-full flex-col items-center">
-          <div className="absolute h-20 w-full bg-gradient-to-b from-background to-transparent" />
+  return (
+    <div className="relative flex w-full flex-col items-center gap-2">
+      <TimelineNodeLines type={type === "first" ? "first" : "default"} />
 
-          <div className="relative -z-[1] flex w-full flex-col items-center gap-2">
-            {topLinesArray.map((_, index) => (
-              <TimelineLine key={index + "line-first"} />
-            ))}
+      <TimelineItem
+        eventTitle={props.eventTitle}
+        eventDate={props.eventDate}
+        position={position}
+      />
 
-            <TimelineItem
-              eventTitle={props.eventTitle}
-              eventDate={props.eventDate}
-              position={position}
-            />
-
-            {nodeLinesArray.map((_, index) => (
-              <TimelineLine key={index + "line-fist-bottom"} />
-            ))}
-          </div>
-        </div>
-      );
-
-    case "last":
-      return (
-        <div className="relative flex w-full flex-col items-center gap-2">
-          {nodeLinesArray.map((_, index) => (
-            <TimelineLine key={index + "line-last"} />
-          ))}
-
-          <TimelineItem
-            eventTitle={props.eventTitle}
-            eventDate={props.eventDate}
-            position={position}
-          />
-        </div>
-      );
-
-    case "default":
-      return (
-        <div className="relative flex w-full flex-col items-center gap-2">
-          {nodeLinesArray.map((_, index) => (
-            <TimelineLine key={index + "line-node-top"} />
-          ))}
-
-          <TimelineItem
-            eventTitle={props.eventTitle}
-            eventDate={props.eventDate}
-            position={position}
-          />
-
-          {nodeLinesArray.map((_, index) => (
-            <TimelineLine key={index + "line-node-bottom"} />
-          ))}
-        </div>
-      );
-  }
+      <TimelineNodeLines type={type === "last" ? "last" : "default"} />
+    </div>
+  );
 }

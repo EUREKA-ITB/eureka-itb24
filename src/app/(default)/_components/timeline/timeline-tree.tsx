@@ -8,44 +8,23 @@ type TTimelineTreeProps = {
 
 export default function TimelineTree(props: TTimelineTreeProps) {
   const events = getEvents(props.type);
+  const getNodeType = (index: number) => {
+    if (index === 0) return "first";
+    if (index === events.length - 1) return "last";
+    return "default";
+  };
 
   return (
-    <div
-      id="timeline"
-      className="container flex w-full max-w-screen-md flex-col items-center gap-2"
-    >
-      {events.map((event, index) => {
-        if (index === 0) {
-          return (
-            <TimelineNode
-              type="first"
-              index={index}
-              eventTitle={event.title}
-              eventDate={event.date}
-              key={index + "timeline-first" + event.title}
-            />
-          );
-        } else if (index === events.length - 1) {
-          return (
-            <TimelineNode
-              type="last"
-              index={index}
-              eventTitle={event.title}
-              eventDate={event.date}
-              key={index + "timeline-last" + event.title}
-            />
-          );
-        }
-
-        return (
-          <TimelineNode
-            index={index}
-            eventTitle={event.title}
-            eventDate={event.date}
-            key={index + "timeline-node" + event.title}
-          />
-        );
-      })}
+    <div className="container flex w-full max-w-screen-md flex-col items-center gap-2">
+      {events.map((event, index) => (
+        <TimelineNode
+          index={index}
+          type={getNodeType(index)}
+          eventTitle={event.title}
+          eventDate={event.date}
+          key={index + `timeline-${getNodeType(index)}` + event.title}
+        />
+      ))}
     </div>
   );
 }

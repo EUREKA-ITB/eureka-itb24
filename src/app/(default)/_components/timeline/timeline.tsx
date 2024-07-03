@@ -1,5 +1,7 @@
 "use client";
 
+import DotPattern from "@/components/magicui/dot-pattern";
+import RadialGradient from "@/components/magicui/radial-gradient";
 import { useState } from "react";
 
 import type { TCompetitionType } from "../../_models/timeline-interfaces";
@@ -11,7 +13,7 @@ export default function Timeline() {
   const [type, setType] = useState<TCompetitionType>("olympiad");
 
   return (
-    <div className="relative flex size-full flex-col items-center pb-24 pt-12">
+    <div className="relative flex size-full flex-col items-center overflow-hidden pb-24 pt-12">
       <div className="container flex w-full max-w-fit flex-col gap-3">
         <TimelineTab
           tab={type}
@@ -22,6 +24,16 @@ export default function Timeline() {
       </div>
 
       <TimelineTree type={type} />
+
+      <div className="absolute -z-10 size-full">
+        <DotPattern />
+
+        <RadialGradient
+          size={340}
+          from="transparent"
+          to="hsl(var(--background))"
+        />
+      </div>
     </div>
   );
 }
