@@ -1,10 +1,10 @@
 import { MotionDiv } from "@/components/motion/motion";
 import { fontSecondary } from "@/lib/fonts";
+import type { TEventDate } from "@/lib/models/competition-interfaces";
 import formatDateRange from "@/lib/repositories/formatDateRange";
 import { cn } from "@/lib/utils/shadcn-utils";
 import type { Variants } from "framer-motion";
 
-import type { TEventDate } from "../../_models/timeline-interfaces";
 import TimelineDot from "./timeline-dot";
 import TimelineIndicator from "./timeline-indicator";
 

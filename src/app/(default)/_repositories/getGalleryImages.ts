@@ -1,4 +1,4 @@
-import type { TGalleryImage } from "../_models/gallery-interfaces";
+import type { TGalleryImage } from "@/lib/models/gallery-interfaces";
 
 export default function getGalleryImages(): TGalleryImage[] {
   return [

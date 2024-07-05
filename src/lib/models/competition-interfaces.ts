@@ -10,4 +10,13 @@ export type TEvent = {
   date: TEventDate;
 };
 
+export type TCompetitionLevel = "SMA/MA" | "Perguruan Tinggi" | "Umum";
+
 export type TCompetitionType = "olympiad" | "scientific" | "pre";
+
+export type TCompetition = {
+  name: string;
+  slug: TCompetitionType;
+  levels: TCompetitionLevel[];
+  description: string;
+};

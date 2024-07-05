@@ -1,7 +1,6 @@
+import type { TEventDate } from "@/lib/models/competition-interfaces";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-
-import type { TEventDate } from "../_models/timeline-interfaces";
 
 dayjs.extend(relativeTime);
 
@@ -12,9 +11,10 @@ export default function getEventStatus(date: TEventDate) {
     : dayjs().isAfter(date.start, "day");
   const isOngoing = !hasntStarted && !hasEnded;
 
-  const timeBeforeStarts = hasntStarted && dayjs(date.start).fromNow(true);
-  const timeBeforeEnds = isOngoing && dayjs(date.end).fromNow(true);
-  const timeAfterEnds = hasEnded && dayjs(date.end).toNow(true);
+  const timeBeforeStarts =
+    hasntStarted && dayjs(date.start).local().fromNow(true);
+  const timeBeforeEnds = isOngoing && dayjs(date.end).local().fromNow(true);
+  const timeAfterEnds = hasEnded && dayjs(date.end).local().toNow(true);
 
   return {
     hasntStarted,

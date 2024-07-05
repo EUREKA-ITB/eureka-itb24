@@ -1,8 +1,8 @@
 import { Badge } from "@/components/shadcn-ui/badge";
 import { fontSecondary } from "@/lib/fonts";
+import type { TEventDate } from "@/lib/models/competition-interfaces";
 import { cn } from "@/lib/utils/shadcn-utils";
 
-import type { TEventDate } from "../../_models/timeline-interfaces";
 import getIndicatorText from "../../_repositories/getIndicatorText";
 import getIndicatorVariant from "../../_repositories/getIndicatorVariant";
 

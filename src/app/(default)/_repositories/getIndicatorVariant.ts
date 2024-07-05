@@ -1,6 +1,6 @@
 import type { BadgeProps } from "@/components/shadcn-ui/badge";
+import type { TEventDate } from "@/lib/models/competition-interfaces";
 
-import type { TEventDate } from "../_models/timeline-interfaces";
 import getEventStatus from "./getEventStatus";
 
 export default function getIndicatorVariant(

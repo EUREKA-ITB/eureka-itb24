@@ -2,9 +2,9 @@
 
 import DotPattern from "@/components/magicui/dot-pattern";
 import RadialGradient from "@/components/magicui/radial-gradient";
+import type { TCompetitionType } from "@/lib/models/competition-interfaces";
 import { useState } from "react";
 
-import type { TCompetitionType } from "../../_models/timeline-interfaces";
 import TimelineTab from "./timeline-tab";
 import TimelineTitle from "./timeline-title";
 import TimelineTree from "./timeline-tree";

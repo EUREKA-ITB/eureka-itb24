@@ -1,4 +1,5 @@
-import type { TEventDate } from "../../_models/timeline-interfaces";
+import type { TEventDate } from "@/lib/models/competition-interfaces";
+
 import TimelineItem from "./timeline-item";
 import TimelineNodeLines from "./timeline-node-lines";
 

@@ -1,4 +1,5 @@
-import type { TEventDate } from "../_models/timeline-interfaces";
+import type { TEventDate } from "@/lib/models/competition-interfaces";
+
 import getEventStatus from "./getEventStatus";
 
 export default function getIndicatorText(date: TEventDate): string {
