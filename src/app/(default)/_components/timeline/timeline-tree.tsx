@@ -1,4 +1,5 @@
-import type { TCompetitionType } from "../../_models/timeline-interfaces";
+import type { TCompetitionType } from "@/lib/models/competition-interfaces";
+
 import getEvents from "../../_repositories/getEvents";
 import TimelineNode from "./timeline-node";
 

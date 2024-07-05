@@ -1,7 +1,6 @@
 import { Card } from "@/components/shadcn-ui/card";
+import type { TGalleryImage } from "@/lib/models/gallery-interfaces";
 import Image from "next/image";
-
-import type { TGalleryImage } from "../../_models/gallery-interfaces";
 
 type TGalleryCardProps = {
   image: TGalleryImage;

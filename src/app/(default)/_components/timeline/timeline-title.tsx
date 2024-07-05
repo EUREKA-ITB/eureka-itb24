@@ -1,8 +1,8 @@
 import { AnimatePresence, MotionH3 } from "@/components/motion/motion";
 import { fontSecondary } from "@/lib/fonts";
+import type { TCompetitionType } from "@/lib/models/competition-interfaces";
 import { cn } from "@/lib/utils/shadcn-utils";
 
-import type { TCompetitionType } from "../../_models/timeline-interfaces";
 import getCompetitions from "../../_repositories/getCompetitions";
 
 type TTimelineTitleProps = {

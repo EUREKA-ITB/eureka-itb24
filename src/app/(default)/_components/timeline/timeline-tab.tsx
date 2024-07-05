@@ -1,6 +1,6 @@
 import { Button } from "@/components/shadcn-ui/button";
+import type { TCompetitionType } from "@/lib/models/competition-interfaces";
 
-import type { TCompetitionType } from "../../_models/timeline-interfaces";
 import getCompetitions from "../../_repositories/getCompetitions";
 
 type TTimelineTabProps = {
