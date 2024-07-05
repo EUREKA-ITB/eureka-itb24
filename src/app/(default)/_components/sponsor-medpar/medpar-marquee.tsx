@@ -18,6 +18,7 @@ export default function MedparMarquee() {
             style={{ width: "auto", height: 175 }}
             width="0"
             height="0"
+            loading="lazy"
           />
         ))}
       </div>
