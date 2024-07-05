@@ -14,7 +14,7 @@ export default function CompetitionCard(props: TCompetitionCardProps) {
     <Link
       className="group relative flex size-full flex-col items-center justify-center gap-6 transition-all ease-in-out hover:cursor-pointer hover:drop-shadow-blue-glow-sm last:sm:min-h-[10rem] last:sm:items-start md:last:col-span-2"
       aria-label={props.competition.name}
-      href={props.competition.slug}
+      href={`/events/${props.competition.slug}`}
     >
       <Card className="relative flex w-full flex-col gap-6 p-12">
         <div className="flex max-w-[80ch] flex-col gap-3">

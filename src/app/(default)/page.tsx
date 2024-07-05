@@ -4,6 +4,8 @@ import CompetitionsList from "./_components/competitions/competitions-list";
 import CompetitionsSectionTitle from "./_components/competitions/competitions-section-title";
 import Gallery from "./_components/gallery/gallery";
 import HeroText from "./_components/hero/hero-text";
+import MedparMarquee from "./_components/sponsor-medpar/medpar-marquee";
+import SponsorMedparSectionTitle from "./_components/sponsor-medpar/sponsor-medpar-section-title";
 import Timeline from "./_components/timeline/timeline";
 import SchrodiCameo from "./_components/what-is-eureka/schrodi-cameo";
 import WhatIsEureka from "./_components/what-is-eureka/what-is-eureka";
@@ -11,6 +13,8 @@ import WhatIsEureka from "./_components/what-is-eureka/what-is-eureka";
 const HeroBackground = dynamic(
   () => import("./_components/hero/hero-background"),
 );
+
+const Schrodis = dynamic(() => import("./_components/schrodis/schrodis"));
 
 export default function Home() {
   return (
@@ -33,11 +37,19 @@ export default function Home() {
 
       <Timeline />
 
-      <div className="container relative flex flex-col items-center justify-center gap-9 overflow-hidden pb-32 pt-4">
+      <div className="container relative flex flex-col items-center justify-center gap-9 overflow-hidden pb-16 pt-4 sm:pt-16">
         <CompetitionsSectionTitle />
 
         <CompetitionsList />
       </div>
+
+      <div className="relative z-[2] flex w-full flex-col items-center gap-16 overflow-hidden pb-32 pt-16">
+        <SponsorMedparSectionTitle />
+
+        <MedparMarquee />
+      </div>
+
+      <Schrodis />
     </>
   );
 }

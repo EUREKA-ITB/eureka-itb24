@@ -4,8 +4,8 @@ import React from "react";
 
 export default function CompetitionsSectionTitle() {
   return (
-    <div className="container flex flex-col items-center justify-center text-pretty text-center xs:gap-3">
-      <h1 className="text-[40px] font-bold italic tracking-tight drop-shadow-blue-glow xs:text-5xl sm:text-7xl lg:text-[5rem]">
+    <div className="flex flex-col items-center justify-center text-pretty text-center xs:gap-3">
+      <h1 className="text-[40px] font-bold italic tracking-tight drop-shadow-blue-glow xs:text-5xl sm:text-7xl lg:text-[5rem] xl:text-8xl">
         OUR EVENTS
       </h1>
 
