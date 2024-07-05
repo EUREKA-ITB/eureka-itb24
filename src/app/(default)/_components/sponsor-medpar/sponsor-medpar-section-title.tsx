@@ -1,6 +1,6 @@
 export default function SponsorMedparSectionTitle() {
   return (
-    <div className="flex flex-col items-center gap-2 text-balance">
+    <div className="container flex w-full flex-col items-center justify-center gap-1 text-pretty text-center">
       <h1 className="text-[40px] font-bold italic tracking-tight drop-shadow-blue-glow xs:text-5xl sm:text-7xl lg:text-[5rem] xl:text-8xl">
         SUPPORTED BY
       </h1>
