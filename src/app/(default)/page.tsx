@@ -15,7 +15,7 @@ const HeroBackground = dynamic(
 export default function Home() {
   return (
     <>
-      <div className="relative flex size-full max-h-screen flex-grow bg-stars bg-right bg-repeat sm:bg-top">
+      <div className="relative flex size-full max-h-screen flex-grow">
         <HeroBackground />
 
         <div className="relative flex flex-grow flex-col overflow-hidden">

@@ -12,6 +12,7 @@ export default function NavigationBarMenu() {
     <div className="flex items-center gap-0 text-sm xs:gap-2">
       {items.map((item) => (
         <Link
+          aria-label={item.label}
           className={buttonVariants({ variant: "linkHover2" })}
           key={item.href}
           href={item.href}
@@ -21,6 +22,7 @@ export default function NavigationBarMenu() {
       ))}
 
       <Link
+        aria-label="Dashboard"
         href="https://dashboard.eurekaitb.com/"
         className={cn(
           buttonVariants({ variant: "shine", size: "sm" }),
@@ -31,6 +33,7 @@ export default function NavigationBarMenu() {
       </Link>
 
       <Link
+        aria-label="Dashboard"
         href="https://dashboard.eurekaitb.com/"
         className={cn(
           buttonVariants({ variant: "shine", size: "icon" }),

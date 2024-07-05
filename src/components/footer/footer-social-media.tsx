@@ -10,6 +10,7 @@ export default function FooterSocialMedia() {
     <div className="flex items-center gap-2 py-1">
       {socialMedias.map((socialMedia) => (
         <Link
+          aria-label={socialMedia.label}
           key={socialMedia.href}
           href={socialMedia.href}
           className={buttonVariants({ variant: "ghost", size: "icon" })}

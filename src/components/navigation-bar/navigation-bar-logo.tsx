@@ -5,6 +5,7 @@ export default function NavigationBarLogo() {
   return (
     <Link
       href="/"
+      aria-label="Go back to homepage"
       className="flex items-center font-sans text-2xl font-bold [text-shadow:4px_2px_16px_white]"
     >
       <Image
