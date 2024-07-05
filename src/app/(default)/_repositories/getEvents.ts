@@ -18,27 +18,27 @@ export default function getEvents(type: TCompetitionType): TEvent[] {
         {
           title: "Registrasi Olimpiade",
           date: {
-            start: dayjs.tz(new Date(2024, 6, 10, 24, 59, 59), "Asia/Jakarta"),
-            end: dayjs.tz(new Date(2024, 10, 15, 24, 59, 59), "Asia/Jakarta"),
+            start: dayjs.tz("2024-07-10 00:00:00", "Asia/Jakarta"),
+            end: dayjs.tz("2024-09-15 23:59:59", "Asia/Jakarta"),
           },
         },
         {
           title: "Babak Penyisihan Olimpiade",
           date: {
-            start: dayjs.tz(new Date(2024, 8, 21, 24, 59, 59), "Asia/Jakarta"),
+            start: dayjs.tz("2024-09-21 00:00:00", "Asia/Jakarta"),
           },
         },
         {
           title: "Pengumuman Hasil Penyisihan Olimpiade",
           date: {
-            start: dayjs.tz(new Date(2024, 8, 23, 24, 59, 59), "Asia/Jakarta"),
+            start: dayjs.tz("2024-09-23 00:00:00", "Asia/Jakarta"),
           },
         },
         {
           title: "Semifinal dan Final Olimpiade",
           date: {
-            start: dayjs.tz(new Date(2024, 8, 27, 24, 59, 59), "Asia/Jakarta"),
-            end: dayjs.tz(new Date(2024, 8, 29, 24, 59, 59), "Asia/Jakarta"),
+            start: dayjs.tz("2024-09-27 00:00:00", "Asia/Jakarta"),
+            end: dayjs.tz("2024-09-29 23:59:59", "Asia/Jakarta"),
           },
         },
       ];
@@ -48,28 +48,28 @@ export default function getEvents(type: TCompetitionType): TEvent[] {
         {
           title: "Registrasi dan Submisi Abstrak",
           date: {
-            start: dayjs.tz(new Date(2024, 6, 10, 24, 59, 59), "Asia/Jakarta"),
-            end: dayjs.tz(new Date(2024, 7, 25, 24, 59, 59), "Asia/Jakarta"),
+            start: dayjs.tz("2024-07-10 00:00:00", "Asia/Jakarta"),
+            end: dayjs.tz("2024-08-25 23:59:59", "Asia/Jakarta"),
           },
         },
         {
           title: "Pengumuman Hasil Seleksi Abstrak",
           date: {
-            start: dayjs.tz(new Date(2024, 8, 1, 24, 59, 59), "Asia/Jakarta"),
+            start: dayjs.tz("2024-09-01 00:00:00", "Asia/Jakarta"),
           },
         },
         {
           title: "Pengumuman Full Paper",
           date: {
-            start: dayjs.tz(new Date(2024, 8, 2, 24, 59, 59), "Asia/Jakarta"),
-            end: dayjs.tz(new Date(2024, 8, 19, 24, 59, 59), "Asia/Jakarta"),
+            start: dayjs.tz("2024-09-02 00:00:00", "Asia/Jakarta"),
+            end: dayjs.tz("2024-09-19 23:59:59", "Asia/Jakarta"),
           },
         },
         {
           title: "Presentasi dan Pengumuman Pemenang",
           date: {
-            start: dayjs.tz(new Date(2024, 9, 27, 24, 59, 59), "Asia/Jakarta"),
-            end: dayjs.tz(new Date(2024, 9, 29, 24, 59, 59), "Asia/Jakarta"),
+            start: dayjs.tz("2024-09-27 00:00:00", "Asia/Jakarta"),
+            end: dayjs.tz("2024-09-29 23:59:59", "Asia/Jakarta"),
           },
         },
       ];
@@ -79,14 +79,14 @@ export default function getEvents(type: TCompetitionType): TEvent[] {
         {
           title: "Lomba Komik dan Diseminasi",
           date: {
-            start: dayjs.tz(new Date(2024, 4, 24, 24, 59, 59), "Asia/Jakarta"),
-            end: dayjs.tz(new Date(2024, 5, 24, 24, 59, 59), "Asia/Jakarta"),
+            start: dayjs.tz("2024-05-24 00:00:00", "Asia/Jakarta"),
+            end: dayjs.tz("2024-06-24 23:59:59", "Asia/Jakarta"),
           },
         },
         {
           title: "Pengumuman Lomba Komik dan Diseminasi",
           date: {
-            start: dayjs.tz(new Date(2024, 6, 9, 24, 59, 59), "Asia/Jakarta"),
+            start: dayjs.tz("2024-07-09 00:00:00", "Asia/Jakarta"),
           },
         },
       ];
