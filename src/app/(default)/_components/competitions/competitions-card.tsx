@@ -21,21 +21,21 @@ export default function CompetitionCard(props: TCompetitionCardProps) {
         </p>
       </div>
 
-      <div className="flex w-full max-w-[80ch] flex-wrap items-center justify-between gap-x-8 gap-y-4 group-last:sm:justify-start">
-        <div className="flex items-center gap-2 self-start">
+      <div className="flex w-full max-w-[80ch] items-center justify-between gap-x-8 gap-y-4 group-last:md:justify-start">
+        <div className="flex flex-wrap items-center gap-2 self-start overflow-hidden">
           {props.competition.levels.map((level) => (
             <Badge
               key={props.competition.slug + props.competition.levels}
               variant="secondary"
+              className="min-w-0 max-w-full overflow-hidden text-ellipsis whitespace-nowrap"
             >
               {level}
             </Badge>
           ))}
         </div>
+
         <div className="flex -translate-x-8 items-center gap-2 text-sm opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100">
-          <span className="hidden xs:inline md:hidden lg:inline">
-            Learn more
-          </span>{" "}
+          <span className="hidden xs:inline">Learn more</span>{" "}
           <ArrowRightIcon fontSize={12} />
         </div>
       </div>
