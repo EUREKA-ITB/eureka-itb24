@@ -9,29 +9,31 @@ type TCompetitionCardProps = {
   competition: TCompetition;
 };
 
-export default function CompetitionCard(props: TCompetitionCardProps) {
+export default function CompetitionCard({
+  competition,
+}: TCompetitionCardProps) {
   return (
     <Link
       className="group relative flex size-full flex-col items-center justify-center gap-6 transition-all ease-in-out hover:cursor-pointer hover:drop-shadow-blue-glow-sm last:sm:min-h-[10rem] last:sm:items-start md:last:col-span-2"
-      aria-label={props.competition.name}
-      href={`/events/${props.competition.slug}`}
+      aria-label={competition.name}
+      href={`/events/${competition.slug}`}
     >
       <Card className="relative flex w-full flex-col gap-6 p-12">
         <div className="flex max-w-[80ch] flex-col gap-3">
           <h1 className="w-full text-left text-3xl font-bold md:text-2xl lg:text-3xl">
-            {props.competition.name}
+            {competition.name}
           </h1>
 
           <p className="text-justify md:text-sm lg:text-base">
-            {props.competition.description}
+            {competition.description}
           </p>
         </div>
 
         <div className="flex w-full max-w-[80ch] items-center justify-between gap-x-8 gap-y-4 group-last:md:justify-start">
           <div className="flex flex-wrap items-center gap-2 self-start overflow-hidden">
-            {props.competition.levels.map((level) => (
+            {competition.levels.map((level) => (
               <Badge
-                key={props.competition.slug + props.competition.levels}
+                key={competition.slug + competition.levels}
                 variant="secondary"
                 className="min-w-0 max-w-full overflow-hidden text-ellipsis whitespace-nowrap"
               >
