@@ -1,7 +1,4 @@
-import type {
-  TCompetition,
-  TCompetitionType,
-} from "@/lib/models/competition-interfaces";
+import type { TCompetition } from "@/lib/models/competition-interfaces";
 
 export default function getCompetitions(): TCompetition[] {
   return [
