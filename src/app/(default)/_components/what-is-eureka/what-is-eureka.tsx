@@ -14,10 +14,9 @@ export default function WhatIsEureka() {
           fontSecondary.className,
         )}
       >
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quis
-        aperiam assumenda sed, saepe quae? Voluptatibus, vitae laudantium.
-        Cupiditate fugiat consequuntur autem tenetur modi facilis, officiis cum!
-        Saepe, fugiat exercitationem.
+        Kompetisi Fisika Nasional Tingkat SMA dan Perguruan Tinggi yang terdiri
+        dari Olimpiade Fisika, Lomba Karya Tulis Ilmiah, dan berbagai macam
+        kompetisi lainnya.
       </h3>
     </div>
   );
