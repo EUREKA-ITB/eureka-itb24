@@ -16,12 +16,12 @@ export default function getCompetitions(): TCompetition[] {
       description:
         "Ajang bergengsi bagi siswa SMA/sederajat dan mahasiswa untuk menunjukkan kemampuan menulis ilmiah dengan berbagai topik menarik dari berbagai lingkup penelitian dalam dunia fisika sehingga dapat mengasah kemampuan peserta dalam menyusun argumen ilmiah, menganalisis data, dan mempresentasikannya secara efektif.",
     },
-    {
-      name: "Pre-event",
-      slug: "pre",
-      levels: ["Umum"],
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam officia omnis id corrupti sapiente? Nemo, fugit? Illo nesciunt nihil itaque eos optio, quasi sunt magni vel dolore est, dolorem similique?",
-    },
+    // {
+    //   name: "Pre-event",
+    //   slug: "pre",
+    //   levels: ["Umum"],
+    //   description:
+    //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam officia omnis id corrupti sapiente? Nemo, fugit? Illo nesciunt nihil itaque eos optio, quasi sunt magni vel dolore est, dolorem similique?",
+    // },
   ];
 }

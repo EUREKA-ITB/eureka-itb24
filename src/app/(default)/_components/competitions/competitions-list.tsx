@@ -7,13 +7,14 @@ export default function CompetitionsList() {
   const competitions = getCompetitions();
 
   return (
-    <BentoGrid className="grid auto-rows-max grid-cols-1 md:grid-cols-2">
+    <div className="flex flex-col gap-4 md:flex-row">
       {competitions.map((competition) => (
         <CompetitionCard
           key={competition.slug}
           competition={competition}
+          className="md:h-[27rem] xl:h-96"
         />
       ))}
-    </BentoGrid>
+    </div>
   );
 }

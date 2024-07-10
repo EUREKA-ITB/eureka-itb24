@@ -7,14 +7,16 @@ import Link from "next/link";
 
 type TCompetitionCardProps = {
   competition: TCompetition;
+  className?: string;
 };
 
 export default function CompetitionCard({
   competition,
+  className,
 }: TCompetitionCardProps) {
   return (
     <Link
-      className="group relative flex size-full flex-col items-center justify-center gap-6 transition-all ease-in-out hover:cursor-pointer hover:drop-shadow-blue-glow-sm last:sm:min-h-[10rem] last:sm:items-start md:last:col-span-2"
+      className={`group relative flex size-full flex-col items-center justify-center gap-6 transition-all ease-in-out hover:cursor-pointer hover:drop-shadow-blue-glow-sm last:sm:min-h-[10rem] last:sm:items-start md:last:col-span-2 ${className}`}
       aria-label={competition.name}
       href={`/events/${competition.slug}`}
     >
