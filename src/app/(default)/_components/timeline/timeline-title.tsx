@@ -28,7 +28,9 @@ export default function TimelineTitle(props: TTimelineTitleProps) {
           animate={{ translateY: 0, opacity: 1 }}
           className={cn("text-xl font-light", fontSecondary.className)}
         >
-          {competition.name} timeline
+          {competition.name[0].toUpperCase() +
+            competition.name.slice(1).toLowerCase()}{" "}
+          timeline
         </MotionH3>
       </AnimatePresence>
     </div>

@@ -1,9 +1,5 @@
 import OlympiadTechnical from "./events-olympiad-technical.mdx";
 
-export default function EventsOlympiad() {
-  return (
-    <>
-      <OlympiadTechnical />
-    </>
-  );
+export default function Page() {
+  return <OlympiadTechnical />;
 }
