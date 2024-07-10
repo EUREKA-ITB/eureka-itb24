@@ -1,5 +1,12 @@
 import type { Config } from "tailwindcss";
 
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 const config = {
   darkMode: ["class"],
   content: [
@@ -12,14 +19,24 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
       screens: {
-        "2xl": "1400px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
     },
     extend: {
       screens: {
-        xs: "320px",
+        xs: "480px",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -27,63 +44,16 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        neutral: {
-          50: "hsl(var(--neutral-50))",
-          100: "hsl(var(--neutral-100))",
-          200: "hsl(var(--neutral-200))",
-          300: "hsl(var(--neutral-300))",
-          400: "hsl(var(--neutral-400))",
-          500: "hsl(var(--neutral-500))",
-          600: "hsl(var(--neutral-600))",
-          700: "hsl(var(--neutral-700))",
-          800: "hsl(var(--neutral-800))",
-          900: "hsl(var(--neutral-900))",
-          950: "hsl(var(--neutral-950))",
-          foreground: "hsl(var(--neutral-foreground))",
-        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          50: "hsl(var(--primary-50))",
-          100: "hsl(var(--primary-100))",
-          200: "hsl(var(--primary-200))",
-          300: "hsl(var(--primary-300))",
-          400: "hsl(var(--primary-400))",
-          500: "hsl(var(--primary-500))",
-          600: "hsl(var(--primary-600))",
-          700: "hsl(var(--primary-700))",
-          800: "hsl(var(--primary-800))",
-          900: "hsl(var(--primary-900))",
-          950: "hsl(var(--primary-950))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
-          50: "hsl(var(--secondary-50))",
-          100: "hsl(var(--secondary-100))",
-          200: "hsl(var(--secondary-200))",
-          300: "hsl(var(--secondary-300))",
-          400: "hsl(var(--secondary-400))",
-          500: "hsl(var(--secondary-500))",
-          600: "hsl(var(--secondary-600))",
-          700: "hsl(var(--secondary-700))",
-          800: "hsl(var(--secondary-800))",
-          900: "hsl(var(--secondary-900))",
-          950: "hsl(var(--secondary-950))",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
-          50: "hsl(var(--destructive-50))",
-          100: "hsl(var(--destructive-100))",
-          200: "hsl(var(--destructive-200))",
-          300: "hsl(var(--destructive-300))",
-          400: "hsl(var(--destructive-400))",
-          500: "hsl(var(--destructive-500))",
-          600: "hsl(var(--destructive-600))",
-          700: "hsl(var(--destructive-700))",
-          800: "hsl(var(--destructive-800))",
-          900: "hsl(var(--destructive-900))",
-          950: "hsl(var(--destructive-950))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
@@ -92,17 +62,6 @@ const config = {
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
-          50: "hsl(var(--accent-50))",
-          100: "hsl(var(--accent-100))",
-          200: "hsl(var(--accent-200))",
-          300: "hsl(var(--accent-300))",
-          400: "hsl(var(--accent-400))",
-          500: "hsl(var(--accent-500))",
-          600: "hsl(var(--accent-600))",
-          700: "hsl(var(--accent-700))",
-          800: "hsl(var(--accent-800))",
-          900: "hsl(var(--accent-900))",
-          950: "hsl(var(--accent-950))",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
@@ -112,21 +71,6 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        },
-        success: {
-          DEFAULT: "hsl(var(--success))",
-          50: "hsl(var(--success-50))",
-          100: "hsl(var(--success-100))",
-          200: "hsl(var(--success-200))",
-          300: "hsl(var(--success-300))",
-          400: "hsl(var(--success-400))",
-          500: "hsl(var(--success-500))",
-          600: "hsl(var(--success-600))",
-          700: "hsl(var(--success-700))",
-          800: "hsl(var(--success-800))",
-          900: "hsl(var(--success-900))",
-          950: "hsl(var(--success-950))",
-          foreground: "hsl(var(--success-foreground))",
         },
       },
       borderRadius: {
@@ -143,17 +87,59 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        shine: {
+          from: { backgroundPosition: "200% 0" },
+          to: { backgroundPosition: "-200% 0" },
+        },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        shine: "shine 8s ease-in-out infinite",
+        "meteor-effect": "meteor 5s linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
-      backgroundImage: {
-        stars: "url('./../../public/stars.png')",
+      dropShadow: {
+        "blue-glow": "0px 0px 16px rgba(1,170,185,1)",
+        "blue-glow-sm": "0px 0px 8px rgba(1,170,185,1)",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 } satisfies Config;
 
 export default config;
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

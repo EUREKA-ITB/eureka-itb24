@@ -1,4 +1,4 @@
-export const metadataSitemap = [
+export const sitemap = [
   {
     url: "https://eurekaitb.com",
     lastModified: new Date(),

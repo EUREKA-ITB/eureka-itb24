@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-export const metadataData: Metadata = {
-  title: "Coming Soon - EUREKA! ITB 2024",
+export const metadata: Metadata = {
+  title: "EUREKA! ITB 2024",
   description:
     "Acara kompetisi fisika tahunan yang diselenggarakan oleh EUREKA! ITB 2024, dan merupakan bagian dari HIMAFI ITB.",
   applicationName: "EUREKA! ITB",

@@ -1,4 +1,4 @@
-import { manifestData } from "@/lib/manifest";
+import { manifest as manifestData } from "@/lib/manifest";
 import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
