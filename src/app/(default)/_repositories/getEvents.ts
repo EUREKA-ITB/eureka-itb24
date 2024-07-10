@@ -46,9 +46,16 @@ export default function getEvents(type: TCompetitionType): TEvent[] {
     case "scientific":
       return [
         {
-          title: "Registrasi dan Submisi Abstrak",
+          title: "Registrasi Scientific Writing Competition",
           date: {
             start: dayjs.tz("2024-07-10 00:00:00", "Asia/Jakarta"),
+            end: dayjs.tz("2024-08-25 23:59:59", "Asia/Jakarta"),
+          },
+        },
+        {
+          title: "Submisi Abstrak",
+          date: {
+            start: dayjs.tz("2024-08-01 00:00:00", "Asia/Jakarta"),
             end: dayjs.tz("2024-08-25 23:59:59", "Asia/Jakarta"),
           },
         },
