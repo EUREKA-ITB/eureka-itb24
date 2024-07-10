@@ -16,11 +16,11 @@ export default function CompetitionCard({
 }: TCompetitionCardProps) {
   return (
     <div
-      className={`group pointer-events-none relative flex size-full flex-col items-center justify-center gap-6 transition-all ease-in-out hover:cursor-pointer hover:drop-shadow-blue-glow-sm last:sm:min-h-[10rem] last:sm:items-start md:last:col-span-2 ${className}`}
+      className={`group pointer-events-none relative flex size-full flex-col items-center justify-center gap-6 transition-all ease-in-out hover:cursor-pointer hover:drop-shadow-blue-glow-sm last:sm:min-h-[10rem] ${className}`}
       aria-label={competition.name}
       // href={`/events/${competition.slug}`}
     >
-      <Card className="relative flex h-full w-full flex-col gap-6 p-12">
+      <Card className="relative flex h-full w-full flex-col justify-center gap-6 p-12">
         <div className="flex max-w-[80ch] flex-col gap-3">
           <h1 className="w-full text-left text-3xl font-bold md:text-2xl lg:text-3xl">
             {competition.name}

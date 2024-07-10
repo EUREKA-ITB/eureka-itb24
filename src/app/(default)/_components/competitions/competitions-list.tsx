@@ -7,12 +7,12 @@ export default function CompetitionsList() {
   const competitions = getCompetitions();
 
   return (
-    <div className="flex flex-col gap-4 md:flex-row">
+    <div className="grid gap-4 md:grid-cols-2">
       {competitions.map((competition) => (
         <CompetitionCard
           key={competition.slug}
           competition={competition}
-          className="md:h-[27rem] xl:h-96"
+          className="h-full"
         />
       ))}
     </div>
