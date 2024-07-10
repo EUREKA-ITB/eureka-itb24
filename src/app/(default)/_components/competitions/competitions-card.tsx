@@ -18,7 +18,7 @@ export default function CompetitionCard({
       aria-label={competition.name}
       href={`/events/${competition.slug}`}
     >
-      <Card className="relative flex w-full flex-col gap-6 p-12">
+      <Card className="relative flex h-full w-full flex-col gap-6 p-12">
         <div className="flex max-w-[80ch] flex-col gap-3">
           <h1 className="w-full text-left text-3xl font-bold md:text-2xl lg:text-3xl">
             {competition.name}
