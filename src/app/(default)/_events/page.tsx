@@ -5,7 +5,7 @@ import EventsList from "../_components/events-list/events-list";
 
 export default function EventsPage() {
   return (
-    <div className="container flex flex-col py-6">
+    <div className="container flex flex-col overflow-hidden py-6">
       <h1 className="mb-10 text-center text-6xl font-bold drop-shadow-blue-glow md:mt-20">
         EVENTS
       </h1>

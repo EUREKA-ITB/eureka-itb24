@@ -10,7 +10,7 @@ export default function NavigationBarMenu() {
 
   return (
     <div className="flex items-center gap-0 text-sm xs:gap-2">
-      {items.map((item) => (
+      {/* {items.map((item) => (
         <Link
           aria-label={item.label}
           className={buttonVariants({ variant: "linkHover2" })}
@@ -19,7 +19,7 @@ export default function NavigationBarMenu() {
         >
           {item.label}
         </Link>
-      ))}
+      ))} */}
 
       <Link
         aria-label="Dashboard"
