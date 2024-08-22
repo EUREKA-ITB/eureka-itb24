@@ -49,7 +49,7 @@ export default function getEvents(type: TCompetitionType): TEvent[] {
           title: "Registrasi Scientific Writing Competition",
           date: {
             start: dayjs.tz("2024-07-10 00:00:00", "Asia/Jakarta"),
-            end: dayjs.tz("2024-08-25 23:59:59", "Asia/Jakarta"),
+            end: dayjs.tz("2024-08-15 23:59:59", "Asia/Jakarta"),
           },
         },
         {
