@@ -19,7 +19,7 @@ export default function getEvents(type: TCompetitionType): TEvent[] {
           title: "Registrasi Olimpiade",
           date: {
             start: dayjs.tz("2024-07-10 00:00:00", "Asia/Jakarta"),
-            end: dayjs.tz("2024-09-15 23:59:59", "Asia/Jakarta"),
+            end: dayjs.tz("2024-09-07 23:59:59", "Asia/Jakarta"),
           },
         },
         {
@@ -66,7 +66,7 @@ export default function getEvents(type: TCompetitionType): TEvent[] {
           },
         },
         {
-          title: "Pengumuman Full Paper",
+          title: "Submisi Full Paper",
           date: {
             start: dayjs.tz("2024-09-02 00:00:00", "Asia/Jakarta"),
             end: dayjs.tz("2024-09-19 23:59:59", "Asia/Jakarta"),
