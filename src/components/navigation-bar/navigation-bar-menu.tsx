@@ -1,47 +1,68 @@
 import getNavigationBarMenu from "@/lib/repositories/getNavigationBarMenu";
-import { cn } from "@/lib/utils/shadcn-utils";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { IoMdLogIn } from "react-icons/io";
 
-import { buttonVariants } from "../shadcn-ui/button";
+import { Button, buttonVariants } from "../shadcn-ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../shadcn-ui/dropdown-menu";
 
 export default function NavigationBarMenu() {
   const items = getNavigationBarMenu();
 
   return (
     <div className="flex items-center gap-0 text-sm xs:gap-2">
-      {items.map((item) => (
-        <Link
-          aria-label={item.label}
-          className={buttonVariants({ variant: "linkHover2" })}
-          key={item.href}
-          href={item.href}
-        >
-          {item.label}
-        </Link>
-      ))}
-
+      <div className="hidden items-center gap-0 text-sm xs:gap-2 lg:flex">
+        {items.map((item) => (
+          <Link
+            aria-label={item.label}
+            className={buttonVariants({ variant: "linkHover2" })}
+            key={item.href}
+            href={item.href}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </div>
       <Link
         aria-label="Register"
         href="https://dashboard.eurekaitb.com/"
-        className={cn(
-          buttonVariants({ variant: "shine", size: "sm" }),
-          "hidden xs:flex",
-        )}
+        className={buttonVariants({ size: "sm" })}
       >
-        Register
+        Dashboard
       </Link>
-
-      <Link
-        aria-label="Dashboard"
-        href="https://dashboard.eurekaitb.com/"
-        className={cn(
-          buttonVariants({ variant: "shine", size: "icon" }),
-          "xs:hidden",
-        )}
-      >
-        <IoMdLogIn size={20} />
-      </Link>
+      <DropdownMenu>
+        <DropdownMenuTrigger
+          className="lg:hidden"
+          asChild
+        >
+          <Button
+            className="size-7"
+            size="icon"
+          >
+            <HamburgerMenuIcon />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          {items.map((item) => (
+            <DropdownMenuItem
+              key={item.href}
+              asChild
+              className="hover:cursor-pointer"
+            >
+              <Link
+                aria-label={item.label}
+                href={item.href}
+              >
+                {item.label}
+              </Link>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 }

@@ -3,6 +3,11 @@ import { AiFillBook } from "react-icons/ai";
 export default function getNavigationBarMenu() {
   return [
     {
+      label: "Olympiad Elimination",
+      href: "https://bit.ly/HasilPenyisihanPhysicsOlympiadEUREKAITB2024",
+      icon: <AiFillBook size={16} />,
+    },
+    {
       label: "Abstract Selection",
       href: "https://bit.ly/HasilSeleksiAbstrakFinalEUREKAITB2024",
       icon: <AiFillBook size={16} />,
