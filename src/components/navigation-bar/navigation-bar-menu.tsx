@@ -14,7 +14,7 @@ export default function NavigationBarMenu() {
   const items = getNavigationBarMenu();
 
   return (
-    <div className="flex items-center gap-0 text-sm xs:gap-2">
+    <div className="flex items-center gap-2 text-sm">
       <div className="hidden items-center gap-0 text-sm xs:gap-2 lg:flex">
         {items.map((item) => (
           <Link
