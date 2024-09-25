@@ -15,7 +15,7 @@ export default function NavigationBarMenu() {
 
   return (
     <div className="flex items-center gap-2 text-sm">
-      <div className="hidden items-center gap-0 text-sm xs:gap-2 lg:flex">
+      <div className="hidden items-center gap-0 text-sm xs:gap-2 xl:flex">
         {items.map((item) => (
           <Link
             aria-label={item.label}
@@ -36,7 +36,7 @@ export default function NavigationBarMenu() {
       </Link>
       <DropdownMenu>
         <DropdownMenuTrigger
-          className="lg:hidden"
+          className="xl:hidden"
           asChild
         >
           <Button
