@@ -15,18 +15,6 @@ export default function NavigationBarMenu() {
 
   return (
     <div className="flex items-center gap-2 text-sm">
-      <div className="hidden items-center gap-0 text-sm xs:gap-2 xl:flex">
-        {items.map((item) => (
-          <Link
-            aria-label={item.label}
-            className={buttonVariants({ variant: "linkHover2" })}
-            key={item.href}
-            href={item.href}
-          >
-            {item.label}
-          </Link>
-        ))}
-      </div>
       <Link
         aria-label="Register"
         href="https://dashboard.eurekaitb.com/"
@@ -35,10 +23,7 @@ export default function NavigationBarMenu() {
         Dashboard
       </Link>
       <DropdownMenu>
-        <DropdownMenuTrigger
-          className="xl:hidden"
-          asChild
-        >
+        <DropdownMenuTrigger asChild>
           <Button
             className="size-7"
             size="icon"
