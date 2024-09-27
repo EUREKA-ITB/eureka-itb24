@@ -4,7 +4,7 @@ export default function getNavigationBarMenu() {
   return [
     {
       label: "Olympiad Semifinal",
-      href: "https://eurekaitb.com", // Attention: change this link to the right one later
+      href: "https://bit.ly/HasilSemifinalPhysicsOlympiadEUREKAITB2024",
       icon: <AiFillBook size={16} />,
     },
     {
